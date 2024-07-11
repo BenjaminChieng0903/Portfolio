@@ -26,6 +26,11 @@ const NavigationBar = () => {
                   activeIndex === index ? "active" : ""
                 }`}
                 onClick={() => {
+                  if (index == 0) {
+                    navigate("/");
+                  } else {
+                    navigate(`/${navDetailsArray[index].substring(1)}`);
+                  }
                   setActiveIndex(index);
                 }}
               >
