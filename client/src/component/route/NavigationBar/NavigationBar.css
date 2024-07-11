@@ -3,16 +3,28 @@
   flex-direction: row;
   justify-content: space-evenly;
   gap: 500px;
-  font-size: large;
-  background-color: orange;
+  background-color: #282c34;
   padding: 20px;
 }
 .container-el {
   flex: 0 0 200px;
 }
 .nav-details {
+  flex: 0 0 400px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   gap: 40px;
+}
+.text-element {
+  font-size: 10px;
+  color: #ffff99;
+}
+
+.text-element:hover {
+  color: #d8bfd8;
+}
+
+.text-element:active {
+  color: #add8e6;
 }
