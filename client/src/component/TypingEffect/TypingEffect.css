@@ -1,4 +1,4 @@
-/* .typing-effect {
+.typing-effect {
   font-family: "Press Start 2P", monospace;
   font-size: 24px;
   color: #ffff99;
@@ -16,4 +16,4 @@
   50% {
     border-color: orange;
   }
-} */
+}
