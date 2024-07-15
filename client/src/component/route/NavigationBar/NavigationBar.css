@@ -19,12 +19,30 @@
 .text-element {
   font-size: 10px;
   color: #ffff99;
+  cursor: pointer;
 }
 
 .text-element:hover {
   color: #d8bfd8;
 }
 
-.text-element:active {
-  color: #add8e6;
+.text-element-active {
+  font-size: 10px;
+  color: #4791e1;
+}
+.fixed-image-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px; /* Adjust the width as needed */
+  height: 100vh; /* Full height */
+  z-index: 10; /* Ensure it stays above other content */
+}
+
+.fixed-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the image covers the container */
+  object-position: top;
+  overflow: hidden;
 }

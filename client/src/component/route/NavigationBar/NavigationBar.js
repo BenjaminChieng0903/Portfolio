@@ -15,6 +15,12 @@ const NavigationBar = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   return (
     <div>
+      <div class="fixed-image-container">
+        <img
+          src={`${process.env.PUBLIC_URL}/images/code-line.jpg`}
+          class="fixed-image"
+        />
+      </div>
       <div className="nav-container">
         <span className="container-el">logo</span>
         <div className="nav-details">
@@ -23,7 +29,7 @@ const NavigationBar = () => {
               <span
                 key={index}
                 className={`text-element${
-                  activeIndex === index ? "active" : ""
+                  activeIndex === index ? "-active" : ""
                 }`}
                 onClick={() => {
                   if (index == 0) {
