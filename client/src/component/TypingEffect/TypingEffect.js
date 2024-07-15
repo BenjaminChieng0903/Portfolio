@@ -35,7 +35,13 @@ const TypingEffect = ({ texts, speed }) => {
     return () => clearTimeout(typeTimer);
   }, [displayedText, typingSpeed, isDeleting, loopNum, texts, speed]);
 
-  return <span className="typing-effect">{displayedText}</span>;
+  return (
+    <div>
+      <span className="typing-line-size">&#123; &quot;</span>
+      <span className="typing-effect">{displayedText}</span>
+      <span className="typing-line-size">&quot; &#125;</span>
+    </div>
+  );
 };
 
 export default TypingEffect;

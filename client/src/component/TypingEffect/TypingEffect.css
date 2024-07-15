@@ -1,5 +1,5 @@
 .typing-effect {
-  font-size: 24px;
+  font-size: 36px;
   color: #ffff99;
   white-space: nowrap;
   overflow: hidden;
@@ -15,4 +15,8 @@
   50% {
     border-color: orange;
   }
+}
+.typing-line-size {
+  font-size: 36px;
+  font-weight: 100;
 }
