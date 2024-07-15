@@ -9,13 +9,15 @@
 
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 200vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
+  padding-top: 120px;
   font-size: calc(10px + 2vmin);
   color: white;
+  gap: 20px;
 }
 
 .typing-effect {
@@ -25,4 +27,27 @@
 .self-intro {
   font-size: 20px;
   font-family: "Courier New", Courier, monospace;
+}
+.arrow-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.line {
+  width: 2px;
+  height: 10px;
+  background-color: white;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid white;
 }
