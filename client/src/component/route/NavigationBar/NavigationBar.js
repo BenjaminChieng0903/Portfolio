@@ -1,9 +1,10 @@
 import { Outlet, useNavigate } from "react-router-dom";
 import "./NavigationBar.css";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const NavigationBar = () => {
   const navigate = useNavigate();
+  const navRef = useRef(null);
   const navDetailsArray = [
     "_home",
     "_about",
@@ -13,6 +14,7 @@ const NavigationBar = () => {
     "_contact",
   ];
   const [activeIndex, setActiveIndex] = useState(0);
+
   return (
     <>
       <div className="fixed-image-container">
@@ -21,7 +23,7 @@ const NavigationBar = () => {
           class="fixed-image"
         />
       </div>
-      <div className=" nav-container">
+      <div className=" nav-container" ref={navRef}>
         <span className="container-el">logo</span>
         <div className="nav-details">
           {navDetailsArray.map((item, index) => {
@@ -47,7 +49,7 @@ const NavigationBar = () => {
         </div>
       </div>
 
-      <Outlet />
+      <Outlet context={navRef} />
       {/* <div className="background-image-container">
         <div class="scrollable-content"></div>
       </div> */}

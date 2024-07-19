@@ -1,7 +1,15 @@
+import { useOutletContext } from "react-router-dom";
 import TypingEffect from "../../TypingEffect/TypingEffect";
 import "./homePage.css";
 const HomePage = () => {
   const texts = ["Software Engineer", "Full-stack Developer"];
+  const navRef = useOutletContext();
+
+  const scrollToSection = () => {
+    navRef.current.scrollIntoView({
+      behavior: "smooth",
+    });
+  };
   return (
     <div className="App">
       <header className="child-hierarchy App-header">
@@ -45,7 +53,9 @@ const HomePage = () => {
             </div>
           </div>
 
-          <button className="read-more">「read_more」</button>
+          <button className="read-more" onClick={() => scrollToSection()}>
+            「read_more」
+          </button>
         </div>
       </div>
     </div>
