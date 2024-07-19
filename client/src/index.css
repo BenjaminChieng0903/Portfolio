@@ -3,6 +3,7 @@ body {
   font-family: "Press Start 2P", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 code {
