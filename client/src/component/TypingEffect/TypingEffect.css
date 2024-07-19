@@ -1,3 +1,7 @@
+.typingContainer {
+  /* position: relative;
+  z-index: 10; */
+}
 .typing-effect {
   font-size: 36px;
   color: #ffff99;

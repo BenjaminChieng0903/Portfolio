@@ -14,14 +14,14 @@ const NavigationBar = () => {
   ];
   const [activeIndex, setActiveIndex] = useState(0);
   return (
-    <div>
-      <div class="fixed-image-container">
+    <>
+      <div className="fixed-image-container">
         <img
           src={`${process.env.PUBLIC_URL}/images/code-line.jpg`}
           class="fixed-image"
         />
       </div>
-      <div className="nav-container">
+      <div className=" nav-container">
         <span className="container-el">logo</span>
         <div className="nav-details">
           {navDetailsArray.map((item, index) => {
@@ -48,8 +48,11 @@ const NavigationBar = () => {
       </div>
 
       <Outlet />
-      <footer>Hi, this is footer</footer>
-    </div>
+      {/* <div className="background-image-container">
+        <div class="scrollable-content"></div>
+      </div> */}
+      <footer className=" footer">Hi, this is footer</footer>
+    </>
   );
 };
 
