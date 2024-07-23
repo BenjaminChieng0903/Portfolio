@@ -27,8 +27,8 @@ const HomePage = () => {
       </div>
       <div className="child-hierarchy about-me-container">
         <span className="about-me-banner">&#123;/&#125;</span>
-        <span className="about-me">&lt;About me&gt;</span>
-        <p className="about-me-intro">
+        <span className="any-section-title">&lt;About me&gt;</span>
+        <p className="any-section-intro">
           Software Engineer | Full-stack Developer
         </p>
         <div className="about-me-details">
@@ -41,7 +41,7 @@ const HomePage = () => {
               <span className="highlighter"> 10</span> formal projects.
             </div>
             <div className="details-grid-tech-skills">
-              <t1>Tech Stacks</t1>
+              <h1>Tech Stacks</h1>
               <p>
                 Front-end Development: React.js | Javascript/Typescript | HTML |
                 SASS/CSS
@@ -56,6 +56,38 @@ const HomePage = () => {
           <button className="read-more" onClick={() => scrollToSection()}>
             「read_more」
           </button>
+        </div>
+        <div className="portfolio-section">
+          <span>(!)</span>
+          <span className="any-section-title">&lt;Portfolio&gt;</span>
+          <p className="any-section-intro portfolio-intro">
+            The projects varied from different tech stacks, most of the projects
+            were developed with teamwork from the scratch
+          </p>
+          <div className="portfolio">
+            <div className="portfolio-grid-1">
+              <div className="portfolio-flex-box-row">
+                <div className="portfolio-flex-box-column">
+                  {/* <div className="portfolio-image-container"></div> */}
+                  <img
+                    src={`${process.env.PUBLIC_URL}/images/natours.jpg`}
+                  ></img>
+                  <span className="img-title">&#123;Natours&#125;</span>
+                  <p className="img-text">prroject introduction</p>
+                </div>
+                <div className="portfolio-flex-box-column">
+                  <img
+                    src={`${process.env.PUBLIC_URL}/images/science_island.jpg`}
+                  ></img>
+                  <span className="img-title">&#123;Science Island&#125;</span>
+                  <p className="img-text">prroject introduction</p>
+                </div>
+              </div>
+            </div>
+            <div className="portfolio-grid-2">hi</div>
+            <div className="portfolio-grid-3">hi</div>
+            <div className="portfolio-grid-4">hi</div>
+          </div>
         </div>
       </div>
     </div>
