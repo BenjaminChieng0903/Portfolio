@@ -1,10 +1,29 @@
 import { useOutletContext } from "react-router-dom";
 import TypingEffect from "../../TypingEffect/TypingEffect";
 import "./homePage.css";
+import { useEffect, useState } from "react";
 const HomePage = () => {
   const texts = ["Software Engineer", "Full-stack Developer"];
   const navRef = useOutletContext();
+  //   const [scienceIslandImages, setScienceIslandImages] = useState([]);
 
+  const importAllImages = (r) => {
+    return r.keys();
+  };
+  const scienceIslandImages = importAllImages(
+    require.context(
+      `../../../../public/images/ScienceIsland`,
+      false,
+      /\.(png|jpe?g|svg)$/
+    )
+  );
+  const natoursImages = importAllImages(
+    require.context(
+      `../../../../public/images/Natours`,
+      false,
+      /\.(png|jpe?g|svg)$/
+    )
+  );
   const scrollToSection = () => {
     navRef.current.scrollIntoView({
       behavior: "smooth",
@@ -69,18 +88,35 @@ const HomePage = () => {
               <div className="portfolio-flex-box-row">
                 <div className="portfolio-flex-box-column">
                   {/* <div className="portfolio-image-container"></div> */}
-                  <img
-                    src={`${process.env.PUBLIC_URL}/images/natours.jpg`}
-                  ></img>
+                  {natoursImages.map((item) => {
+                    item = item.substring(2);
+                    return (
+                      <img
+                        src={`${process.env.PUBLIC_URL}/images/Natours/${item}`}
+                      ></img>
+                    );
+                  })}
                   <span className="img-title">&#123;Natours&#125;</span>
-                  <p className="img-text">prroject introduction</p>
+                  <p className="img-text">
+                    //.. Natours is a tourism website that introduces exciting
+                    tours in America to customers.
+                  </p>
                 </div>
                 <div className="portfolio-flex-box-column">
-                  <img
-                    src={`${process.env.PUBLIC_URL}/images/science_island.jpg`}
-                  ></img>
+                  {scienceIslandImages.map((item) => {
+                    item = item.substring(2);
+                    return (
+                      <img
+                        src={`${process.env.PUBLIC_URL}/images/ScienceIsland/${item}`}
+                      ></img>
+                    );
+                  })}
                   <span className="img-title">&#123;Science Island&#125;</span>
-                  <p className="img-text">prroject introduction</p>
+                  <p className="img-text">
+                    //.. Science Island is an engaging game-based online
+                    educational platform tailored for children aged eight to
+                    thirteen, focused on imparting STEM knowledge.
+                  </p>
                 </div>
               </div>
             </div>
