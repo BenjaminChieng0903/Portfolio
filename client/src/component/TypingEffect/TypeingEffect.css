@@ -1,7 +1,19 @@
-.service-bar {
+.service-bar-0,
+.service-bar-1,
+.service-bar-2 {
   width: 90%;
   padding: 24px;
-  border: 1px solid #f2dd1f;
+  border: 0.5px solid #aba8a7;
+}
+
+.service-bar-0:hover {
+  background-color: #ffff99;
+}
+.service-bar-1:hover {
+  background-color: #ffff99;
+}
+.service-bar-2:hover {
+  background-color: #4791e1;
 }
 .service-bar-title {
   font-size: 48px;
@@ -42,4 +54,5 @@
 .typing-line-size {
   font-size: 36px;
   font-weight: 100;
+  color: white;
 }

@@ -13,10 +13,12 @@ const TypingEffect = ({ title, speed, index }) => {
     return () => clearInterval(timer);
   }, []);
   return (
-    <div className="service-bar">
+    <div className={`service-bar-${index}`}>
+      <span className="typing-line-size">&#123; &quot;</span>
       <span className={`service-bar-title typing-effect-${index}`}>
         {displayedText}
       </span>
+      <span className="typing-line-size">&quot; &#125;</span>
     </div>
   );
 };
