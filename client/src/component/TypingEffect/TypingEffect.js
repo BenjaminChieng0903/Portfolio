@@ -5,31 +5,28 @@ const TypingEffect = ({ title, speed, index }) => {
   const [displayedText, setDisplayedText] = useState("");
   // const serviceBarRef = useRef([]);
   const sectionsRef = useRef([]);
-  const [inViewSections, setInViewSections] = useState([]);
+  const timerRef = useRef([]);
+  //   const [inViewSections, setInViewSections] = useState([]);
 
   const handleScroll = () => {
-    sectionsRef.current.forEach((section, index) => {
+    sectionsRef.current.forEach((section, i) => {
       if (section) {
         const rect = section.getBoundingClientRect();
         const isInView = rect.top >= 0 && rect.bottom <= window.innerHeight;
         if (isInView) {
-          setInViewSections((prevInViewSections) => {
-            if (
-              Array.isArray(prevInViewSections) &&
-              !prevInViewSections.includes(section.className)
-            ) {
-              const typing = () => {
-                setDisplayedText((prev) => title.substring(0, prev.length + 1));
-              };
-              if (displayedText.length != title.length) {
-                const timer = setInterval(typing, speed);
-
-                return () => clearInterval(timer);
-              }
-              return [...prevInViewSections, section.className];
-            }
-            return prevInViewSections;
-          });
+          if (!timerRef.current[i]) {
+            const typing = () => {
+              setDisplayedText((prev) => {
+                const nextText = title.substring(0, prev.length + 1);
+                if (nextText.length === title.length) {
+                  clearInterval(timerRef.current[i]);
+                  timerRef.current[i] = null; // 置空，表示定时器已完成
+                }
+                return nextText;
+              });
+            };
+            timerRef.current[i] = setInterval(typing, speed);
+          }
         }
       }
     });
@@ -41,6 +38,7 @@ const TypingEffect = ({ title, speed, index }) => {
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      timerRef.current.forEach((timer) => clearInterval(timer));
     };
   }, []);
   const addSectionRef = (el, index) => {
@@ -48,16 +46,6 @@ const TypingEffect = ({ title, speed, index }) => {
       sectionsRef.current[index] = el;
     }
   };
-  //   useEffect(() => {
-  //     const typing = () => {
-  //       setDisplayedText((prev) => title.substring(0, prev.length + 1));
-  //     };
-  //     if (displayedText.length != title.length) {
-  //       const timer = setInterval(typing, speed);
-
-  //       return () => clearInterval(timer);
-  //     }
-  //   }, []);
 
   return (
     <div className={`service-bar-${index}`}>
