@@ -1,0 +1,26 @@
+.typingContainer {
+  /* position: relative;
+  z-index: 10; */
+}
+.typing-effect {
+  font-size: 36px;
+  color: #ffff99;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.15em solid orange;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: orange;
+  }
+}
+.typing-line-size {
+  font-size: 36px;
+  font-weight: 100;
+}
