@@ -1,9 +1,10 @@
 import { useOutletContext } from "react-router-dom";
+import TypingEffectRewind from "../../TypingEffect/TypingEffectRewind";
 import TypingEffect from "../../TypingEffect/TypingEffect";
 import "./homePage.css";
-import { useEffect, useState } from "react";
+
 const HomePage = () => {
-  const texts = ["Software Engineer", "Full-stack Developer"];
+  const texts = ["Web Developer", "Software Engineer", "Full-stack Developer"];
   const navRef = useOutletContext();
   //   const [scienceIslandImages, setScienceIslandImages] = useState([]);
 
@@ -33,55 +34,57 @@ const HomePage = () => {
     <div className="App">
       <header className="child-hierarchy App-header">
         <span className="self-intro">Hi, I'm BENJAMIN QIAN, A....</span>
-        <TypingEffect texts={texts} speed={150} />
+        <TypingEffectRewind texts={texts} speed={150} />
         <button class="arrow-button">
           <div class="line"></div>
           <div class="line"></div>
           <div class="arrow"></div>
         </button>
       </header>
-      <div className="child-hierarchy view-window"></div>
+      <div className="view-window child-hierarchy"></div>
       <div className="background-image-container">
         <div class="scrollable-content"></div>
       </div>
-      <div className="child-hierarchy about-me-container">
-        <span className="about-me-banner">&#123;/&#125;</span>
-        <span className="any-section-title">&lt;About me&gt;</span>
-        <p className="any-section-intro">
-          Software Engineer | Full-stack Developer
-        </p>
-        <div className="about-me-details">
-          <div className="details-grid">
-            <div className="details-grid-intro">
-              Software engineer just graduated from master’s degree in software
-              engineering at the University of Melbourne,
-              <span className="highlighter"> 3</span> years of real-world
-              software development experience with more than
-              <span className="highlighter"> 10</span> formal projects.
+      <div className="home-page-body-container child-hierarchy">
+        <section className="about-me-section">
+          <span className="about-me-banner">&#123;/&#125;</span>
+          <span className="any-section-title">&lt;About me&gt;</span>
+          <p className="any-section-intro">
+            Software Engineer | Full-stack Developer
+          </p>
+          <div className="about-me-details">
+            <div className="details-grid">
+              <div className="details-grid-intro">
+                Software engineer just graduated from master’s degree in
+                software engineering at the University of Melbourne,
+                <span className="highlighter"> 3</span> years of real-world
+                software development experience with more than
+                <span className="highlighter"> 10</span> formal projects.
+              </div>
+              <div className="details-grid-tech-skills">
+                <h1>Tech Stacks</h1>
+                <p>
+                  Front-end Development: React.js | Javascript/Typescript | HTML
+                  | SASS/CSS
+                  <br />
+                  Back-end Development: Node.js | Express.js | Java/Springboot |
+                  Python/Flask <br />
+                  Database: MongoDB | MySql | PostgresSql
+                </p>
+              </div>
             </div>
-            <div className="details-grid-tech-skills">
-              <h1>Tech Stacks</h1>
-              <p>
-                Front-end Development: React.js | Javascript/Typescript | HTML |
-                SASS/CSS
-                <br />
-                Back-end Development: Node.js | Express.js | Java/Springboot |
-                Python/Flask <br />
-                Database: MongoDB | MySql | PostgresSql
-              </p>
-            </div>
-          </div>
 
-          <button className="read-more" onClick={() => scrollToSection()}>
-            「read_more」
-          </button>
-        </div>
-        <div className="portfolio-section">
+            <button className="read-more" onClick={() => scrollToSection()}>
+              「read_more」
+            </button>
+          </div>
+        </section>
+        <section className="portfolio-section">
           <span>(!)</span>
           <span className="any-section-title">&lt;Portfolio&gt;</span>
           <p className="any-section-intro portfolio-intro">
-            The projects varied from different tech stacks, most of the projects
-            were developed with teamwork from the scratch
+            //.. The projects varied from different tech stacks, most of the
+            projects were developed with teamwork from the scratch
           </p>
           <div className="portfolio">
             <div className="portfolio-grid-1">
@@ -124,7 +127,29 @@ const HomePage = () => {
             <div className="portfolio-grid-3">hi</div>
             <div className="portfolio-grid-4">hi</div>
           </div>
-        </div>
+        </section>
+        <section className="service-section">
+          <span>(#)</span>
+          <h1 className="any-section-title service-section-title">
+            &lt;Services&gt;
+          </h1>
+          <p className="any-section-intro">
+            //.. Front-end Development | Back-end Development | Web Development
+            | Software Development | Data Integration
+          </p>
+          <div className="services-container">
+            {texts.map((title, index) => {
+              return (
+                <TypingEffect
+                  title={title}
+                  speed={150}
+                  index={index}
+                  key={index}
+                />
+              );
+            })}
+          </div>
+        </section>
       </div>
     </div>
   );
