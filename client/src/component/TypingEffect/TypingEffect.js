@@ -3,10 +3,8 @@ import "./TypeingEffect.css";
 
 const TypingEffect = ({ title, speed, index }) => {
   const [displayedText, setDisplayedText] = useState("");
-  // const serviceBarRef = useRef([]);
   const sectionsRef = useRef([]);
   const timerRef = useRef([]);
-  //   const [inViewSections, setInViewSections] = useState([]);
 
   const handleScroll = () => {
     sectionsRef.current.forEach((section, i) => {

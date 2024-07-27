@@ -74,7 +74,10 @@ const HomePage = () => {
               </div>
             </div>
 
-            <button className="read-more" onClick={() => scrollToSection()}>
+            <button
+              className="homepage-button"
+              onClick={() => scrollToSection()}
+            >
               「read_more」
             </button>
           </div>
@@ -149,6 +152,24 @@ const HomePage = () => {
               );
             })}
           </div>
+          <button className="homepage-button">&#123;all_services&#125;</button>
+        </section>
+        <section className="contact-me-section">
+          <span>(*)</span>
+          <h1 className="any-section-title">&lt;Contact_me&gt;</h1>
+          <p className="any-section-intro">
+            //.. Front-end Development | Back-end Development | Web Development
+            | Software Development | Data Integration
+          </p>
+          <form className="contact-form">
+            <input type="text" placeholder="_name*" required></input>
+            <input type="email" placeholder="_email*" required></input>
+            <textarea
+              className="message"
+              placeholder="_message*"
+              required
+            ></textarea>
+          </form>
         </section>
       </div>
     </div>
