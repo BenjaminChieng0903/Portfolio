@@ -170,6 +170,7 @@ const HomePage = () => {
               required
             ></textarea>
           </form>
+          <button className="homepage-button">&#123;send&#125;</button>
         </section>
       </div>
     </div>
