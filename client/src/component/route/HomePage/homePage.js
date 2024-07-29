@@ -32,6 +32,13 @@ const HomePage = () => {
       /\.(png|jpe?g|svg)$/
     )
   );
+  const kingClothing = importAllImages(
+    require.context(
+      `../../../../public/images/KingClothing`,
+      false,
+      /\.(png|jpe?g|svg)$/
+    )
+  );
   const scrollToSection = () => {
     navRef.current.scrollIntoView({
       behavior: "smooth",
@@ -153,7 +160,26 @@ const HomePage = () => {
                 </p>
               </div>
             </div>
-            <div className="portfolio-grid-3">hi</div>
+            <div className="portfolio-grid-3 portfolio-grid-row">
+              <div className="portfolio-flex-box-column content-in-second-cell">
+                {/* <div className="portfolio-image-container"></div> */}
+                {kingClothing.map((item) => {
+                  item = item.substring(2);
+                  return (
+                    <img
+                      src={`${process.env.PUBLIC_URL}/images/KingClothing/${item}`}
+                    ></img>
+                  );
+                })}
+                <span className="img-title">&#123;Music Event&#125;</span>
+                <p className="img-text">
+                  //.. The Music Event System is an online website for people to
+                  order tickets for various music events. The system with
+                  beautiful UI incorporates multiple backend architecture
+                  designs without utilizing any frameworks
+                </p>
+              </div>
+            </div>
             <div className="portfolio-grid-4">hi</div>
           </div>
         </section>
