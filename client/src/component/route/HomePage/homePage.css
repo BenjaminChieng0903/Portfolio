@@ -114,7 +114,7 @@ button {
   background-position: center;
   background-image: url("../../../../public/images/working-picture.jpg");
   width: 90%;
-  height: 80%;
+  height: 75%;
   overflow: hidden;
 }
 .scrollable-content-bottom {
@@ -217,7 +217,7 @@ h1 {
   display: grid;
   width: 100%;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 0.9fr 0.8fr;
 }
 .portfolio-grid-1 {
   padding: 50px;
@@ -225,10 +225,12 @@ h1 {
   border-right: 0.5px outset #aba8a7;
 }
 .portfolio-grid-2,
-.portfolio-grid-3 {
+.portfolio-grid-3,
+.portfolio-grid-4 {
   padding: 50px;
   border-top: 0.5px inset #aba8a7;
   border-right: 0.5px outset #aba8a7;
+  border-bottom: 0.5px outset #aba8a7;
 }
 .portfolio-grid-row {
   display: grid;
@@ -248,7 +250,7 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 24px;
-  flex: 1 1 300px;
+  flex: 1 1 200px;
 }
 img {
   width: 100%;
