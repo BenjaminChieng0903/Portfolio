@@ -1,0 +1,340 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+
+  /* margin-left: 10%; */
+}
+.child-hierarchy {
+  position: relative;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  padding-top: 60px;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  gap: 40px;
+}
+
+.typing-effect {
+  font-family: "Press Start 2P", monospace;
+  color: #ffff99;
+}
+.self-intro {
+  font-size: 20px;
+  font-family: "Courier New", Courier, monospace;
+}
+.arrow-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 40px;
+}
+
+.line {
+  width: 2px;
+  height: 10px;
+  background-color: white;
+}
+
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid white;
+}
+/* span,
+button {
+  position: relative;
+  z-index: 10;
+} */
+.view-window {
+  align-self: center;
+  width: 90%;
+  height: 50vh;
+  /* background-color: #282c34; */
+}
+.home-page-body-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background-color: #282c34;
+  padding-top: 80px;
+  justify-content: center;
+  gap: 40px;
+  /* align-items: center; */
+}
+.about-me-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.background-image-container {
+  display: flex;
+  position: fixed;
+  z-index: -2;
+  top: 0%;
+  height: 100%;
+  width: 100%;
+  /* align-items: center; */
+  justify-content: center;
+  background-color: #282c34;
+}
+.scrollable-content-top {
+  position: fixed;
+  z-index: -1;
+
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* right: 5%; */
+  bottom: 12%;
+  background-size: cover;
+  background-position: center;
+  background-image: url("../../../../public/images/working-picture.jpg");
+  width: 90%;
+  height: 75%;
+  overflow: hidden;
+}
+.scrollable-content-bottom {
+  position: fixed;
+  z-index: -1;
+  left: 50%;
+  right: 5%;
+  bottom: 12%;
+  transform: translateX(-50%);
+  /* bottom: 50%; */
+  background-size: cover;
+  background-position: center;
+  background-image: url("../../../../public/images/pexels-pixabay-416405.jpg");
+  width: 90%;
+  height: 100px;
+  overflow: hidden;
+}
+.any-section-title {
+  width: 100%;
+  font-size: 36px;
+  color: white;
+}
+.about-me-banner {
+  color: #8d69e0;
+}
+.any-section-intro {
+  font-family: "Courier New", Courier, monospace;
+  color: #f2dd1f;
+  font-size: 20px;
+}
+.about-me-details {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+.details-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.homepage-button {
+  background-color: #16acc9;
+  transition: background-color 0.3s ease;
+  padding: 20px 30px;
+  color: white;
+  text-align: center;
+  border: none;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 16px;
+}
+.homepage-button:hover {
+  cursor: pointer;
+  background-color: #8d69e0;
+}
+.details-grid-intro {
+  color: white;
+
+  font-family: "Courier New", Courier, monospace;
+  font-size: 24px;
+  padding: 64px;
+  text-decoration: underline;
+  border-top: 0.5px inset #aba8a7;
+  border-right: 0.5px outset #aba8a7;
+  /* align-self: flex-end; */
+}
+.highlighter {
+  color: #f2dd1f;
+  font-size: 32px;
+}
+.details-grid-tech-skills {
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+  font-size: 16px;
+  padding: 64px;
+  /* text-decoration: underline; */
+  border-top: 0.5px inset #aba8a7;
+  border-right: 0.5px outset #aba8a7;
+}
+h1 {
+  font-size: 24px;
+  color: #f2dd1f;
+}
+.portfolio-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  padding-top: 64px;
+  color: #8d69e0;
+}
+.portfolio-title {
+  color: white;
+  font-size: 32px;
+}
+.portfolio-intro {
+  padding: 0px 100px;
+}
+.portfolio {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 0.9fr 0.8fr;
+}
+.portfolio-grid-1 {
+  padding: 50px;
+  border-top: 0.5px inset #aba8a7;
+  border-right: 0.5px outset #aba8a7;
+}
+.portfolio-grid-2,
+.portfolio-grid-3,
+.portfolio-grid-4 {
+  padding: 50px;
+  border-top: 0.5px inset #aba8a7;
+  border-right: 0.5px outset #aba8a7;
+  border-bottom: 0.5px outset #aba8a7;
+}
+.portfolio-grid-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
+}
+.content-in-second-cell {
+  grid-column: 2/3;
+  grid-row: 1/2;
+}
+.portfolio-flex-box-row {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+}
+.portfolio-flex-box-column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1 1 200px;
+}
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+img:hover {
+  transform: scale(1.1);
+}
+.img-title {
+  font-size: 16px;
+
+  color: white;
+  /* font-family: "Courier New", Courier, monospace; */
+}
+.img-text {
+  font-size: 16px;
+  font-family: "Courier New", Courier, monospace;
+  color: #f2dd1f;
+  font-weight: bold;
+}
+.service-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px;
+  gap: 40px;
+  color: #8d69e0;
+}
+.service-section-title {
+  font-size: 16px;
+}
+.services-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+}
+.contact-me-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 64px;
+  gap: 40px;
+  color: #8d69e0;
+}
+.contact-form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 24px;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+input,
+textarea {
+  position: relative;
+  width: 90%;
+  height: auto;
+  border: none;
+  border-bottom: 1px outset #aba8a7;
+  padding: 16px;
+  background-color: #282c34;
+  outline: none;
+  font-size: 16px;
+  font-family: "Press Start 2P";
+  color: #8d69e0;
+}
+input::placeholder,
+textarea::placeholder {
+  /* outline: none; */
+  font-size: 16px;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: bold;
+  color: #8d69e0;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border-bottom: 1px solid #8d69e0;
+}
+.message {
+  height: 30vh;
+}

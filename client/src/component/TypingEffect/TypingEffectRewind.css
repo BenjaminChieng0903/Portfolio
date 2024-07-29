@@ -1,6 +1,9 @@
-/* .typing-effect {
-  font-family: "Press Start 2P", monospace;
-  font-size: 24px;
+.typingContainer {
+  /* position: relative;
+  z-index: 10; */
+}
+.typing-effect {
+  font-size: 36px;
   color: #ffff99;
   white-space: nowrap;
   overflow: hidden;
@@ -16,4 +19,8 @@
   50% {
     border-color: orange;
   }
-} */
+}
+.typing-line-size {
+  font-size: 36px;
+  font-weight: 100;
+}

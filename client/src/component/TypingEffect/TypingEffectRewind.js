@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "./TypingEffect.css";
+import "./TypingEffectRewind.css";
 
-const TypingEffect = ({ texts, speed }) => {
+const TypingEffectRewind = ({ texts, speed }) => {
   const [displayedText, setDisplayedText] = useState("");
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(speed);
@@ -35,7 +35,13 @@ const TypingEffect = ({ texts, speed }) => {
     return () => clearTimeout(typeTimer);
   }, [displayedText, typingSpeed, isDeleting, loopNum, texts, speed]);
 
-  return <span className="typing-effect">{displayedText}</span>;
+  return (
+    <div className="typingContainer">
+      <span className="typing-line-size">&#123; &quot;</span>
+      <span className="typing-effect">{displayedText}</span>
+      <span className="typing-line-size">&quot; &#125;</span>
+    </div>
+  );
 };
 
-export default TypingEffect;
+export default TypingEffectRewind;
