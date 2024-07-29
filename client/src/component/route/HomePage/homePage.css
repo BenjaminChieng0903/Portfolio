@@ -25,7 +25,7 @@
   flex-direction: column;
   align-items: center;
   /* justify-content: center; */
-  padding-top: 120px;
+  padding-top: 60px;
   font-size: calc(10px + 2vmin);
   color: white;
   gap: 40px;
@@ -93,27 +93,43 @@ button {
 .background-image-container {
   display: flex;
   position: fixed;
-  z-index: -1;
+  z-index: -2;
   top: 0%;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   /* align-items: center; */
   justify-content: center;
   background-color: #282c34;
 }
-.scrollable-content {
+.scrollable-content-top {
   position: fixed;
-  z-index: 0;
+  z-index: -1;
 
-  top: 0%;
-  left: 5%;
-  right: 5%;
-  /* bottom: 50%; */
+  top: 12%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* right: 5%; */
+  bottom: 12%;
   background-size: cover;
   background-position: center;
   background-image: url("../../../../public/images/working-picture.jpg");
   width: 90%;
-  height: 100vh;
+  height: 80%;
+  overflow: hidden;
+}
+.scrollable-content-bottom {
+  position: fixed;
+  z-index: -1;
+  left: 50%;
+  right: 5%;
+  bottom: 12%;
+  transform: translateX(-50%);
+  /* bottom: 50%; */
+  background-size: cover;
+  background-position: center;
+  background-image: url("../../../../public/images/pexels-pixabay-416405.jpg");
+  width: 90%;
+  height: 100px;
   overflow: hidden;
 }
 .any-section-title {
@@ -207,6 +223,20 @@ h1 {
   padding: 50px;
   border-top: 0.5px inset #aba8a7;
   border-right: 0.5px outset #aba8a7;
+}
+.portfolio-grid-2 {
+  padding: 50px;
+  border-top: 0.5px inset #aba8a7;
+  border-right: 0.5px outset #aba8a7;
+}
+.portfolio-grid-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
+}
+.content-in-second-cell {
+  grid-column: 2/3;
+  grid-row: 1/2;
 }
 .portfolio-flex-box-row {
   display: flex;

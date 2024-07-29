@@ -25,6 +25,13 @@ const HomePage = () => {
       /\.(png|jpe?g|svg)$/
     )
   );
+  const musicEvent = importAllImages(
+    require.context(
+      `../../../../public/images/MusicEvent`,
+      false,
+      /\.(png|jpe?g|svg)$/
+    )
+  );
   const scrollToSection = () => {
     navRef.current.scrollIntoView({
       behavior: "smooth",
@@ -43,7 +50,7 @@ const HomePage = () => {
       </header>
       <div className="view-window child-hierarchy"></div>
       <div className="background-image-container">
-        <div class="scrollable-content"></div>
+        <div className="scrollable-content-top"></div>
       </div>
       <div className="home-page-body-container child-hierarchy">
         <section className="about-me-section">
@@ -126,7 +133,26 @@ const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="portfolio-grid-2">hi</div>
+            <div className="portfolio-grid-2 portfolio-grid-row">
+              <div className="portfolio-flex-box-column content-in-second-cell">
+                {/* <div className="portfolio-image-container"></div> */}
+                {musicEvent.map((item) => {
+                  item = item.substring(2);
+                  return (
+                    <img
+                      src={`${process.env.PUBLIC_URL}/images/MusicEvent/${item}`}
+                    ></img>
+                  );
+                })}
+                <span className="img-title">&#123;Music Event&#125;</span>
+                <p className="img-text">
+                  //.. The Music Event System is an online website for people to
+                  order tickets for various music events. The system with
+                  beautiful UI incorporates multiple backend architecture
+                  designs without utilizing any frameworks
+                </p>
+              </div>
+            </div>
             <div className="portfolio-grid-3">hi</div>
             <div className="portfolio-grid-4">hi</div>
           </div>
@@ -154,12 +180,15 @@ const HomePage = () => {
           </div>
           <button className="homepage-button">&#123;all_services&#125;</button>
         </section>
+        {/* <div className="view-window child-hierarchy"></div>
+        <div className="background-image-container">
+          <div className="scrollable-content-bottom"></div>
+        </div> */}
         <section className="contact-me-section">
           <span>(*)</span>
           <h1 className="any-section-title">&lt;Contact_me&gt;</h1>
           <p className="any-section-intro">
-            //.. Front-end Development | Back-end Development | Web Development
-            | Software Development | Data Integration
+            //.. Contact/Inquire the future rising star in IT industry
           </p>
           <form className="contact-form">
             <input type="text" placeholder="_name*" required></input>
