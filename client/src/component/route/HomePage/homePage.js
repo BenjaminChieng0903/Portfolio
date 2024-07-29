@@ -276,7 +276,7 @@ const HomePage = () => {
           <span>(*)</span>
           <h1 className="any-section-title">&lt;Contact_me&gt;</h1>
           <p className="any-section-intro">
-            //.. Contact/Inquire the future rising star in IT industry
+            //.. Contact/Enquire the future rising star in IT industry
           </p>
           <form className="contact-form">
             <input type="text" placeholder="_name*" required></input>
