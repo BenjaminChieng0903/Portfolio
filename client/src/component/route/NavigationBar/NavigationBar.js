@@ -24,7 +24,7 @@ const NavigationBar = () => {
         />
       </div>
       <div className=" nav-container" ref={navRef}>
-        <span className="container-el">logo</span>
+        <span className="container-el"></span>
         <div className="nav-details">
           {navDetailsArray.map((item, index) => {
             return (

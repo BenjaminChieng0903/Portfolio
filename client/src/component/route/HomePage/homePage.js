@@ -71,7 +71,7 @@ const HomePage = () => {
           <span className="about-me-banner">&#123;/&#125;</span>
           <span className="any-section-title">&lt;About me&gt;</span>
           <p className="any-section-intro">
-            Software Engineer | Full-stack Developer
+            Web Developer | Software Engineer | Full-stack Developer
           </p>
           <div className="about-me-details">
             <div className="details-grid">
@@ -118,9 +118,14 @@ const HomePage = () => {
                   {natoursImages.map((item) => {
                     item = item.substring(2);
                     return (
-                      <img
-                        src={`${process.env.PUBLIC_URL}/images/Natours/${item}`}
-                      ></img>
+                      <a
+                        href="https://github.com/BenjaminChieng0903/Natours"
+                        target="_blank"
+                      >
+                        <img
+                          src={`${process.env.PUBLIC_URL}/images/Natours/${item}`}
+                        ></img>
+                      </a>
                     );
                   })}
                   <span className="img-title">&#123;Natours&#125;</span>
@@ -133,9 +138,11 @@ const HomePage = () => {
                   {scienceIslandImages.map((item) => {
                     item = item.substring(2);
                     return (
-                      <img
-                        src={`${process.env.PUBLIC_URL}/images/ScienceIsland/${item}`}
-                      ></img>
+                      <a href="https://www.scienceisland.com/" target="_blank">
+                        <img
+                          src={`${process.env.PUBLIC_URL}/images/ScienceIsland/${item}`}
+                        ></img>
+                      </a>
                     );
                   })}
                   <span className="img-title">&#123;Science Island&#125;</span>
@@ -153,9 +160,14 @@ const HomePage = () => {
                 {musicEvent.map((item) => {
                   item = item.substring(2);
                   return (
-                    <img
-                      src={`${process.env.PUBLIC_URL}/images/MusicEvent/${item}`}
-                    ></img>
+                    <a
+                      href="https://github.com/SWEN900072023/Green-Day"
+                      target="_blank"
+                    >
+                      <img
+                        src={`${process.env.PUBLIC_URL}/images/MusicEvent/${item}`}
+                      ></img>
+                    </a>
                   );
                 })}
                 <span className="img-title">&#123;Music Event&#125;</span>
@@ -173,9 +185,14 @@ const HomePage = () => {
                 {kingClothing.map((item) => {
                   item = item.substring(2);
                   return (
-                    <img
-                      src={`${process.env.PUBLIC_URL}/images/KingClothing/${item}`}
-                    ></img>
+                    <a
+                      href="https://benevolent-basbousa-bf8c47.netlify.app/"
+                      target="_blank"
+                    >
+                      <img
+                        src={`${process.env.PUBLIC_URL}/images/KingClothing/${item}`}
+                      ></img>
+                    </a>
                   );
                 })}
                 <span className="img-title">&#123;King Clothing&#125;</span>
@@ -189,12 +206,30 @@ const HomePage = () => {
             <div className="portfolio-grid-4 portfolio-grid-row">
               <div className="portfolio-flex-box-column content-in-second-cell">
                 {/* <div className="portfolio-image-container"></div> */}
-                {aubot.map((item) => {
+                {aubot.map((item, index) => {
                   item = item.substring(2);
                   return (
-                    <img
-                      src={`${process.env.PUBLIC_URL}/images/Aubot/${item}`}
-                    ></img>
+                    <>
+                      {index != 2 ? (
+                        <a
+                          href="https://aubot-academy.webflow.io/"
+                          target="_blank"
+                        >
+                          <img
+                            src={`${process.env.PUBLIC_URL}/images/Aubot/${item}`}
+                          ></img>
+                        </a>
+                      ) : (
+                        <a
+                          href="https://github.com/BenjaminChieng0903/Python-AST"
+                          target="_blank"
+                        >
+                          <img
+                            src={`${process.env.PUBLIC_URL}/images/Aubot/${item}`}
+                          ></img>
+                        </a>
+                      )}
+                    </>
                   );
                 })}
                 <span className="img-title">&#123;Aubot Academy&#125;</span>
@@ -229,7 +264,9 @@ const HomePage = () => {
               );
             })}
           </div>
-          <button className="homepage-button">&#123;all_services&#125;</button>
+          <button className="homepage-button" onClick={() => scrollToSection()}>
+            &#123;all_services&#125;
+          </button>
         </section>
         {/* <div className="view-window child-hierarchy"></div>
         <div className="background-image-container">

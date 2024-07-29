@@ -9,7 +9,21 @@
   padding: 20px;
 }
 .container-el {
-  flex: 0 0 200px;
+  display: inline-block;
+  line-height: 24px;
+  text-align: center;
+  font-size: 16px;
+  padding-left: 16px;
+}
+.container-el::before {
+  display: block;
+  content: "//Benjamin";
+  color: white;
+}
+.container-el::after {
+  display: block;
+  content: "web_dev";
+  color: #8d69e0;
 }
 .nav-details {
   flex: 0 0 400px;
