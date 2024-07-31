@@ -117,21 +117,6 @@ button {
   height: 75%;
   overflow: hidden;
 }
-.scrollable-content-bottom {
-  position: fixed;
-  z-index: -1;
-  left: 50%;
-  right: 5%;
-  bottom: 12%;
-  transform: translateX(-50%);
-  /* bottom: 50%; */
-  background-size: cover;
-  background-position: center;
-  background-image: url("../../../../public/images/pexels-pixabay-416405.jpg");
-  width: 90%;
-  height: 100px;
-  overflow: hidden;
-}
 .any-section-title {
   width: 100%;
   font-size: 36px;

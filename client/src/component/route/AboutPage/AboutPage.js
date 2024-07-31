@@ -1,3 +1,4 @@
+import COntactMe from "../../ContactMe/ContactMe";
 import TypingEffectRewindSlow from "../../TypingEffect/TypingEffectRewindSlow";
 import "./AboutPage.css";
 const AboutPage = () => {
@@ -27,6 +28,9 @@ const AboutPage = () => {
       <div className="view-window child-hierarchy"></div>
       <div className="background-image-container">
         <div className="scrollable-content-top"></div>
+      </div>
+      <div className="about-page-body-container child-hierarchy">
+        <COntactMe className=""></COntactMe>
       </div>
     </div>
   );
