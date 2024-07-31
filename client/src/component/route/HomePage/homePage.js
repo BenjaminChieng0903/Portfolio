@@ -2,6 +2,7 @@ import { useOutletContext } from "react-router-dom";
 import TypingEffectRewind from "../../TypingEffect/TypingEffectRewind";
 import TypingEffect from "../../TypingEffect/TypingEffect";
 import "./homePage.css";
+import COntactMe from "../../ContactMe/ContactMe";
 
 const HomePage = () => {
   const texts = ["Web Developer", "Software Engineer", "Full-stack Developer"];
@@ -48,7 +49,7 @@ const HomePage = () => {
   );
   const scrollToSection = () => {
     navRef.current.scrollIntoView({
-      behavior: "smooth",
+      behavior: "smooth"
     });
   };
   return (
@@ -272,23 +273,7 @@ const HomePage = () => {
         <div className="background-image-container">
           <div className="scrollable-content-bottom"></div>
         </div> */}
-        <section className="contact-me-section">
-          <span>(*)</span>
-          <h1 className="any-section-title">&lt;Contact_me&gt;</h1>
-          <p className="any-section-intro">
-            //.. Contact/Enquire the future rising star in IT industry
-          </p>
-          <form className="contact-form">
-            <input type="text" placeholder="_name*" required></input>
-            <input type="email" placeholder="_email*" required></input>
-            <textarea
-              className="message"
-              placeholder="_message*"
-              required
-            ></textarea>
-          </form>
-          <button className="homepage-button">&#123;send&#125;</button>
-        </section>
+        <COntactMe></COntactMe>
       </div>
     </div>
   );
