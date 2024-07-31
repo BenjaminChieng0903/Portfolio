@@ -9,10 +9,10 @@
   white-space: nowrap;
   overflow: hidden;
   border-right: 0.15em solid orange;
-  animation: blink-caret 0.75s step-end infinite;
+  animation: service-title-blink-caret 0.75s step-end infinite;
 }
 
-@keyframes blink-caret {
+@keyframes service-title-blink-caret {
   from,
   to {
     border-color: transparent;

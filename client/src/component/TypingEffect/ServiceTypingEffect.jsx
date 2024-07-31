@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import "./TypeingEffect.css";
+import "./ServiceTypingEffect.css";
 
-const TypingEffect = ({ title, speed, index }) => {
+const ServiceTypingEffect = ({ title, speed, index }) => {
   const [displayedText, setDisplayedText] = useState("");
   const sectionsRef = useRef([]);
   const timerRef = useRef([]);
@@ -46,17 +46,17 @@ const TypingEffect = ({ title, speed, index }) => {
   };
 
   return (
-    <div className={`service-bar-${index}`}>
-      <span className="typing-line-size">&#123; &quot;</span>
+    <div className="typing-container">
+      <span className="service-typing-line-size">&lt; </span>
       <span
+        className="displayedText service-typing-effect"
         ref={(el) => addSectionRef(el, index)}
-        className={`service-bar-title typing-effect-${index}`}
       >
         {displayedText}
       </span>
-      <span className="typing-line-size">&quot; &#125;</span>
+      <span className="service-typing-line-size"> &gt;</span>
     </div>
   );
 };
 
-export default TypingEffect;
+export default ServiceTypingEffect;

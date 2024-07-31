@@ -40,9 +40,9 @@
   white-space: nowrap;
   overflow: hidden;
   border-right: 0.15em solid orange;
-  animation: blink-caret 0.75s step-end infinite;
+  animation: typing-effect-blink-caret 0.75s step-end infinite;
 }
-@keyframes blink-caret {
+@keyframes typing-effect-blink-caret {
   from,
   to {
     border-color: transparent;
