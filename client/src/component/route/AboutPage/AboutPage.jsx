@@ -42,6 +42,33 @@ const AboutPage = () => {
                 leo.
               </span>
             </div>
+            <div className="traits-container">
+              <span>&#123;!&#125;</span>
+              <span>_learning driven</span>
+              <span>
+                ...lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
+                leo.
+              </span>
+            </div>
+            <div className="traits-container">
+              <span>&#123;#&#125;</span>
+              <span>_engineering mindset</span>
+              <span>
+                ...lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
+                leo.
+              </span>
+            </div>
+            <div className="traits-container">
+              <span>&#123;%&#125;</span>
+              <span>_communication</span>
+              <span>
+                ...lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
+                leo.
+              </span>
+            </div>
           </div>
         </section>
         <COntactMe></COntactMe>
