@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import "./TypingEffectRewind.css";
+import "./TypingEffectRewindSlow.css";
 
-const TypingEffectRewind = ({ texts, speed }) => {
+const TypingEffectRewindSlow = ({ texts, speed }) => {
   const [displayedText, setDisplayedText] = useState("");
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(speed);
@@ -19,10 +19,10 @@ const TypingEffectRewind = ({ texts, speed }) => {
           : currentTitle.substring(0, displayedText.length + 1)
       );
 
-      setTypingSpeed(isDeleting ? speed / 2 : speed);
+      setTypingSpeed(isDeleting ? speed * 2 : speed);
 
       if (!isDeleting && displayedText === currentTitle) {
-        setTimeout(() => setIsDeleting(true), 500);
+        setTimeout(() => setIsDeleting(true), 5000);
         // setIsDeleting(true);
       } else if (isDeleting && displayedText === "") {
         setLoopNum(loopNum + 1);
@@ -37,11 +37,11 @@ const TypingEffectRewind = ({ texts, speed }) => {
 
   return (
     <div className="typingContainer">
-      <span className="typing-line-size">&#123; &quot;</span>
-      <span className="typing-effect">{displayedText}</span>
-      <span className="typing-line-size">&quot; &#125;</span>
+      <span className="typing-line-size-slow">&#123; &quot;</span>
+      <span className="typing-effect-slow">{displayedText}</span>
+      <span className="typing-line-size-slow">&quot; &#125;</span>
     </div>
   );
 };
 
-export default TypingEffectRewind;
+export default TypingEffectRewindSlow;
