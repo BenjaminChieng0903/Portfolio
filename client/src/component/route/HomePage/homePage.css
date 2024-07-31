@@ -117,21 +117,6 @@ button {
   height: 75%;
   overflow: hidden;
 }
-.scrollable-content-bottom {
-  position: fixed;
-  z-index: -1;
-  left: 50%;
-  right: 5%;
-  bottom: 12%;
-  transform: translateX(-50%);
-  /* bottom: 50%; */
-  background-size: cover;
-  background-position: center;
-  background-image: url("../../../../public/images/pexels-pixabay-416405.jpg");
-  width: 90%;
-  height: 100px;
-  overflow: hidden;
-}
 .any-section-title {
   width: 100%;
   font-size: 36px;
@@ -290,51 +275,4 @@ img:hover {
   flex-direction: column;
   gap: 24px;
   align-items: center;
-}
-.contact-me-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 64px;
-  gap: 40px;
-  color: #8d69e0;
-}
-.contact-form {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  gap: 24px;
-  /* justify-content: center; */
-  align-items: center;
-}
-
-input,
-textarea {
-  position: relative;
-  width: 90%;
-  height: auto;
-  border: none;
-  border-bottom: 1px outset #aba8a7;
-  padding: 16px;
-  background-color: #282c34;
-  outline: none;
-  font-size: 16px;
-  font-family: "Press Start 2P";
-  color: #8d69e0;
-}
-input::placeholder,
-textarea::placeholder {
-  /* outline: none; */
-  font-size: 16px;
-  font-family: "Courier New", Courier, monospace;
-  font-weight: bold;
-  color: #8d69e0;
-}
-input:focus,
-textarea:focus {
-  outline: none;
-  border-bottom: 1px solid #8d69e0;
-}
-.message {
-  height: 30vh;
 }
