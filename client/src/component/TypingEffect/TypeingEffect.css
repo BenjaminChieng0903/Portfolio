@@ -24,7 +24,7 @@
   white-space: nowrap;
   overflow: hidden;
   border-right: 0.15em solid orange;
-  animation: blink-caret 0.75s step-end infinite;
+  animation: typing-effect-0-blink-caret 0.75s step-end infinite;
 }
 .typing-effect-1 {
   font-size: 36px;
@@ -32,7 +32,7 @@
   white-space: nowrap;
   overflow: hidden;
   border-right: 0.15em solid orange;
-  animation: blink-caret 0.75s step-end infinite;
+  animation: typing-effect-1-blink-caret 0.75s step-end infinite;
 }
 .typing-effect-2 {
   font-size: 36px;
@@ -40,15 +40,33 @@
   white-space: nowrap;
   overflow: hidden;
   border-right: 0.15em solid orange;
-  animation: typing-effect-blink-caret 0.75s step-end infinite;
+  animation: typing-effect-2-blink-caret 0.75s step-end infinite;
 }
-@keyframes typing-effect-blink-caret {
+@keyframes typing-effect-0-blink-caret {
   from,
   to {
     border-color: transparent;
   }
   50% {
-    border-color: orange;
+    border-color: #8d69e0;
+  }
+}
+@keyframes typing-effect-1-blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #4791e1;
+  }
+}
+@keyframes typing-effect-2-blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ffff99;
   }
 }
 .typing-line-size {
