@@ -1,0 +1,60 @@
+.contact-me-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+
+  /* gap: 100px; */
+  /* margin-left: 10%; */
+}
+.map {
+  width: 90%;
+  height: 100vh;
+}
+.contact-page-body-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background-color: #282c34;
+  /* padding-top: 80px; */
+  /* justify-content: center; */
+  align-items: center;
+  gap: 40px;
+  /* align-items: center; */
+}
+
+.address-grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.phone-details,
+.email-details,
+.address-details {
+  display: flex;
+  flex-direction: column;
+  padding: 56px;
+  gap: 32px;
+  border-top: 0.5px inset #aba8a7;
+  border-right: 0.5px outset #aba8a7;
+}
+
+.phone-details span:first-child,
+.email-details span:first-child,
+.address-details span:first-child {
+  font-size: 24px;
+  font-family: "Courier New", Courier, monospace;
+  color: #8d69e0;
+}
+
+.phone-details span:nth-child(2),
+.email-details span:nth-child(2),
+.address-details span:nth-child(2) {
+  color: #f2dd1f;
+}
