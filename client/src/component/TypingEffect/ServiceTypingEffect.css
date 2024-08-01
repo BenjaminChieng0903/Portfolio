@@ -1,0 +1,28 @@
+.displayedText {
+  font-size: 24px;
+}
+.service-typing-line-size {
+  font-size: 36px;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+.typing-container {
+  width: 100%;
+}
+.service-typing-effect {
+  font-size: 24px;
+  color: #8d69e0;
+  white-space: nowrap;
+  overflow: hidden;
+  /* border-right: 0.15em solid orange; */
+  animation: service-blink-caret 0.75s step-end infinite;
+}
+@keyframes service-blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #8d69e0;
+  }
+}

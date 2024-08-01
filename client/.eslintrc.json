@@ -11,7 +11,7 @@
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 12,
+    "ecmaVersion": 8,
     "sourceType": "module"
   },
   "parser": "@babel/eslint-parser",
