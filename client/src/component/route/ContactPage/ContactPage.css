@@ -7,13 +7,14 @@
   position: relative;
   z-index: 1;
   width: 100%;
+  margin-bottom: 128px;
 
   /* gap: 100px; */
   /* margin-left: 10%; */
 }
 .map {
   width: 90%;
-  height: 100vh;
+  height: 80vh;
 }
 .contact-page-body-container {
   display: flex;
@@ -24,13 +25,12 @@
   /* padding-top: 80px; */
   /* justify-content: center; */
   align-items: center;
-  gap: 40px;
   /* align-items: center; */
 }
 
 .address-grid {
   display: grid;
-  width: 100%;
+  width: 90%;
   grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -42,6 +42,10 @@
   padding: 56px;
   gap: 32px;
   border-top: 0.5px inset #aba8a7;
+  text-align: start;
+}
+.phone-details,
+.email-details {
   border-right: 0.5px outset #aba8a7;
 }
 
@@ -56,5 +60,7 @@
 .phone-details span:nth-child(2),
 .email-details span:nth-child(2),
 .address-details span:nth-child(2) {
+  font-size: 24px;
   color: #f2dd1f;
+  font-family: "Courier New", Courier, monospace;
 }
