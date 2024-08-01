@@ -1,10 +1,15 @@
 import COntactMe from "../../ContactMe/ContactMe";
 import GoogleJavascriptMaps from "../../Map/GoogleJavascriptMaps";
+import TypingEffectRewindSlow from "../../TypingEffect/TypingEffectRewindSlow";
 import "./ContactPage.css";
 
 const ContactPage = () => {
+  const texts = ["Contact"];
   return (
     <div className="contact-me-container">
+      <header className="App-header-contact">
+        <TypingEffectRewindSlow texts={texts} speed={150} />
+      </header>
       <div className="background-image-container"></div>
       <div className="contact-page-body-container">
         <COntactMe></COntactMe>
