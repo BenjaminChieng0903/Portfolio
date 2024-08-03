@@ -124,7 +124,7 @@ const HomePage = () => {
                         target="_blank"
                       >
                         <img
-                          src={`${process.env.PUBLIC_URL}/images/Natours/${item}`}
+                          src={`${process.env.PUBLIC_URL}/images/natours/${item}`}
                         ></img>
                       </a>
                     );
@@ -141,7 +141,7 @@ const HomePage = () => {
                     return (
                       <a href="https://www.scienceisland.com/" target="_blank">
                         <img
-                          src={`${process.env.PUBLIC_URL}/images/ScienceIsland/${item}`}
+                          src={`${process.env.PUBLIC_URL}/images/scienceIsland/${item}`}
                         ></img>
                       </a>
                     );
@@ -166,7 +166,7 @@ const HomePage = () => {
                       target="_blank"
                     >
                       <img
-                        src={`${process.env.PUBLIC_URL}/images/MusicEvent/${item}`}
+                        src={`${process.env.PUBLIC_URL}/images/musicEvent/${item}`}
                       ></img>
                     </a>
                   );
@@ -191,7 +191,7 @@ const HomePage = () => {
                       target="_blank"
                     >
                       <img
-                        src={`${process.env.PUBLIC_URL}/images/KingClothing/${item}`}
+                        src={`${process.env.PUBLIC_URL}/images/kingClothing/${item}`}
                       ></img>
                     </a>
                   );
@@ -217,7 +217,7 @@ const HomePage = () => {
                           target="_blank"
                         >
                           <img
-                            src={`${process.env.PUBLIC_URL}/images/Aubot/${item}`}
+                            src={`${process.env.PUBLIC_URL}/images/aubot/${item}`}
                           ></img>
                         </a>
                       ) : (
@@ -226,7 +226,7 @@ const HomePage = () => {
                           target="_blank"
                         >
                           <img
-                            src={`${process.env.PUBLIC_URL}/images/Aubot/${item}`}
+                            src={`${process.env.PUBLIC_URL}/images/aubot/${item}`}
                           ></img>
                         </a>
                       )}
