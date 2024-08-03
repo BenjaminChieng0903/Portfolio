@@ -55,15 +55,29 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 16px;
 }
-.filter button {
+/* .filter button {
+  font-size: 16px;
+  padding: 8px 4px;
+  color: #f2dd1f;
+  background-color: #282c34;
+  border: 1px solid #f2dd1f;
+} */
+.filter button:hover {
+  color: #8d69e0;
+  border: 1px solid #8d69e0;
+}
+.button-style {
   font-size: 16px;
   padding: 8px 4px;
   color: #f2dd1f;
   background-color: #282c34;
   border: 1px solid #f2dd1f;
 }
-.filter button:hover {
+.button-style-active {
+  font-size: 16px;
+  padding: 8px 4px;
   color: #8d69e0;
+  background-color: #282c34;
   border: 1px solid #8d69e0;
 }
 .project {

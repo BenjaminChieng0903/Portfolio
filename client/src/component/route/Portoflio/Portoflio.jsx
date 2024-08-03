@@ -10,6 +10,7 @@ const Portoflio = () => {
     "Web Application",
     "System"
   ];
+  const [activeIndex, setActiveIndex] = useState(0);
   const importAllImages = (r) => {
     return r.keys();
   };
@@ -89,15 +90,24 @@ const Portoflio = () => {
     }
   ];
   const [projects, setProjects] = useState(projectInfo);
+  const nonFilter = () => {
+    setProjects(projectInfo);
+  };
   const filterWebDevelopment = () => {
-    setProjects(projectInfo.filter((item) => item.type != "Web Development"));
+    setProjects(projectInfo.filter((item) => item.type == "Web Development"));
   };
   const filterWebApp = () => {
-    setProjects(projectInfo.filter((item) => item.type != "Web Application"));
+    setProjects(projectInfo.filter((item) => item.type == "Web Application"));
   };
   const filterSystem = () => {
-    setProjects(projectInfo.filter((item) => item.type != "System"));
+    setProjects(projectInfo.filter((item) => item.type == "System"));
   };
+  const filterFuncArr = [
+    nonFilter,
+    filterWebDevelopment,
+    filterWebApp,
+    filterSystem
+  ];
 
   return (
     <div className="portfolio-container">
@@ -112,10 +122,22 @@ const Portoflio = () => {
       <div className="portfolio-page-body-container">
         <div className="portfolio-filter">
           <div className="filter">
-            <button>{filterTitle[0]}</button>
-            <button onClick={filterWebDevelopment}>{filterTitle[1]}</button>
-            <button onClick={filterWebApp}>{filterTitle[2]}</button>
-            <button onClick={filterSystem}>{filterTitle[3]}</button>
+            {filterTitle.map((title, index) => {
+              return (
+                <button
+                  key={index}
+                  className={`button-style${
+                    activeIndex === index ? "-active" : ""
+                  }`}
+                  onClick={() => {
+                    filterFuncArr[index]();
+                    setActiveIndex(index);
+                  }}
+                >
+                  {title}
+                </button>
+              );
+            })}
           </div>
           <div className="project">
             {projects.map((project) => {
