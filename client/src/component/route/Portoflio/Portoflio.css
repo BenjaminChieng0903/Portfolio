@@ -1,0 +1,90 @@
+.portfolio-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+
+  /* gap: 100px; */
+  /* margin-left: 10%; */
+}
+.child-hierarchy {
+  position: relative;
+}
+.App-header-portfolio {
+  background-color: #282c34;
+  min-height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  padding-top: 60px;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  gap: 30px;
+}
+.portfolio-page-body-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  background-color: #282c34;
+  padding-top: 80px;
+  justify-content: center;
+  gap: 40px;
+  /* align-items: center; */
+}
+.portfolio-section-intro {
+  width: 60%;
+  font-family: "Courier New", Courier, monospace;
+  color: #f2dd1f;
+  font-size: 20px;
+}
+.portfolio-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  align-items: center;
+}
+.filter {
+  display: grid;
+  width: 50%;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 16px;
+}
+/* .filter button {
+  font-size: 16px;
+  padding: 8px 4px;
+  color: #f2dd1f;
+  background-color: #282c34;
+  border: 1px solid #f2dd1f;
+} */
+.filter button:hover {
+  color: #8d69e0;
+  border: 1px solid #8d69e0;
+  cursor: pointer;
+}
+.button-style {
+  font-size: 16px;
+  padding: 8px 4px;
+  color: #f2dd1f;
+  background-color: #282c34;
+  border: 1px solid #f2dd1f;
+}
+.button-style-active {
+  font-size: 16px;
+  padding: 8px 4px;
+  color: #8d69e0;
+  background-color: #282c34;
+  border: 1px solid #8d69e0;
+}
+.project {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
+
+  width: 80%;
+  gap: 48px;
+}
