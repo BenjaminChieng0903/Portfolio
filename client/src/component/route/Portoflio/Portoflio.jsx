@@ -119,6 +119,7 @@ const Portoflio = () => {
           interdum eros sapien vel magna.
         </span>
       </header>
+      <div className="background-image-container"></div>
       <div className="portfolio-page-body-container">
         <div className="portfolio-filter">
           <div className="filter">
