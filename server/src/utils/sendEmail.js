@@ -20,7 +20,9 @@ const sendEmail = async (options) => {
     from: options.email,
     to: `Benjamin Qian <${process.env.EMAIL}>`,
     subject: "Enquiry",
-    text: options.text,
+    text: `cleint name: ${options.name}, 
+client email: ${options.email},
+client message: ${options.text}`,
   };
   //3.3 send the email
   await transporter.sendMail(mailOptions);
