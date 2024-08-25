@@ -1,5 +1,25 @@
+import { useState } from "react";
 import "./ContactMe.css";
+import axiosApi from "../../axiosApi/app";
 const COntactMe = () => {
+  const [name, setName] = useState('');
+  const [text, setText] = useState('');
+  const [email, setEmail] = useState('');
+
+ 
+const submitEnquiry = async(e)=>{
+  e.preventDefault();
+  await axiosApi.post('/home/submit',{
+    name: name,
+    email: email,
+    text: text
+  }).then((res)=>{
+    alert("submit successfully!");
+  }).catch((err)=>{
+    alert("sorry, something went wrong");
+  });
+};
+  console.log(name);
   return (
     <section className="contact-me-section">
       <span>(*)</span>
@@ -7,16 +27,18 @@ const COntactMe = () => {
       <p className="any-section-intro">
         //.. Contact/Enquire the future rising star in IT industry
       </p>
-      <form className="contact-form">
-        <input type="text" placeholder="_name*" required></input>
-        <input type="email" placeholder="_email*" required></input>
+      <form className="contact-form" onSubmit={(e)=>submitEnquiry(e)}>
+        <input type="text" placeholder="_name*" required onChange={(e)=>setName(e.target.value)}></input>
+        <input type="email" placeholder="_email*" required onChange={(e)=>setEmail(e.target.value)}></input>
         <textarea
           className="message"
           placeholder="_message*"
           required
-        ></textarea>
+          onChange={(e)=>setText(e.target.value)}
+        ></textarea> 
+        <button className="homepage-button" type="submit">&#123;send&#125;</button>
       </form>
-      <button className="homepage-button">&#123;send&#125;</button>
+     
     </section>
   );
 };

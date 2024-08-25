@@ -7,6 +7,6 @@ const router = express.Router();
  * Landing Page Route - Home for Firebase
  * @route GET /home
  */
-router.get("/ping", homeActions.ping);
+router.post("/submit", homeActions.submitEnquiry);
 
 module.exports = router;
