@@ -9,19 +9,15 @@ const AboutPage = () => {
         <TypingEffectRewindSlow texts={texts} speed={150} />
         <div className="paragraph-container">
           <span>
-            ...I have over 12 years of experience in web development, with a
-            strong background in both front-end and back-end technologies.
-            Nullam facilisis mollis mauris, vitae mollis leo viverra eu. In
-            cursus commodo interdum;
+            ...I have over 4 years of experience in web development, with a
+            strong background in both front-end with React and back-end with Node.js technologies(MERN stack). Experienced in
+            DevOps and cloud deployment with Docker and GCP;
           </span>
           <span>
-            …lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-            facilisis mollis mauris, vitae mollis leo viverra eu. In cursus
-            commodo interdum. Duis vitae ex massa. Quisque luctus diam at mi
-            mollis mollis. Proin nec ex non lectus molestie laoreet sollicitudin
-            auctor urna. Suspendisse varius diam vel egestas finibus. Fusce vel
-            aliquet lectus. Nulla dapibus, turpis nec sodales congue, lectus
-            ipsum vehicula massa, nec pulvinar.
+            …I see myself as a learning-driven developer, a desire of problem-solving and teamwork.
+            I value team collaboration and the appreciation of brainstorming in team.
+            Has a flexible engineering mindset, an advanced understanding of knowledge base change and make new techiques applicable
+            to different requirements.
           </span>
         </div>
       </header>
@@ -37,36 +33,33 @@ const AboutPage = () => {
               <span>&#123;/&#125;</span>
               <span>_team work</span>
               <span>
-                ...lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
-                leo.
+                ...Value teamwork and the appreciation of brainstorming
+                in group discussion.
               </span>
             </div>
             <div className="traits-container">
               <span>&#123;!&#125;</span>
               <span>_learning driven</span>
               <span>
-                ...lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
-                leo.
+                ...A desire of prolem-solving, lifelong learners in software enineering
+                industry.
               </span>
             </div>
             <div className="traits-container">
               <span>&#123;#&#125;</span>
               <span>_engineering mindset</span>
               <span>
-                ...lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
-                leo.
+                ...an appreciation of the design, conduct and reporting of software
+engineering projects, an ability to evaluate and choose software technologies and
+frameworks used in software engineering.
               </span>
             </div>
             <div className="traits-container">
               <span>&#123;%&#125;</span>
               <span>_communication</span>
               <span>
-                ...lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
-                leo.
+                ...A capacity to articulate the knowledge and understanding in oral
+and written forms of communications.
               </span>
             </div>
           </div>
