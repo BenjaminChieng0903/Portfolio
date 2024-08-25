@@ -77,7 +77,7 @@ const HomePage = () => {
           <div className="about-me-details">
             <div className="details-grid">
               <div className="details-grid-intro">
-                Software engineer just graduated from master’s degree in
+                Software engineer graduated from master’s degree in
                 software engineering at the University of Melbourne,
                 <span className="highlighter"> 3</span> years of real-world
                 software development experience with more than
@@ -91,7 +91,8 @@ const HomePage = () => {
                   <br />
                   Back-end Development: Node.js | Express.js | Java/Springboot |
                   Python/Flask <br />
-                  Database: MongoDB | MySql | PostgresSql
+                  Database: MongoDB | MySql | PostgresSql<br />
+                  DevOps: Docker | GCP
                 </p>
               </div>
             </div>
@@ -108,8 +109,11 @@ const HomePage = () => {
           <span>(!)</span>
           <span className="any-section-title">&lt;Portfolio&gt;</span>
           <p className="any-section-intro portfolio-intro">
-            //.. The projects varied from different tech stacks, most of the
-            projects were developed with teamwork from the scratch
+            //.. All the projects were created from scratch, half of projects were developed individually 
+            and another half through teamwork. 
+            The projects can be categorized as websites, web applications, 
+            and systems. Three of them are currently in business use.
+            
           </p>
           <div className="portfolio">
             <div className="portfolio-grid-1">

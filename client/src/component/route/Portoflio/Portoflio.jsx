@@ -114,9 +114,10 @@ const Portoflio = () => {
       <header className="child-hierarchy App-header-portfolio">
         <TypingEffectRewindSlow texts={texts} speed={150} />
         <span className="portfolio-section-intro">
-          …lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-          elementum, eros at sagittis facilisis, ante est rutrum ligula, at
-          interdum eros sapien vel magna.
+          …All the projects were created from scratch, 
+          half of projects were developed individually and another half through teamwork. 
+          The projects can be categorized as websites, web applications, 
+          and systems. Three of them are currently in business use.
         </span>
       </header>
       <div className="background-image-container"></div>
