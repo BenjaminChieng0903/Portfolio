@@ -3,6 +3,8 @@ const morgan = require("morgan");
 const dotenv = require("dotenv");
 const cors = require("cors");
 const indexRoutes = require("../src/routes/index")
+const path = require('path');
+
 
 const BASE_URL = "/api/v1"
 const app = express();
