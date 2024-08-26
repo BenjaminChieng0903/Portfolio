@@ -15,19 +15,17 @@ app.use(morgan("dev"));
 app.use(cors());
 
 app.use(BASE_URL,indexRoutes);
+const PORT = process.env.PORT || 8000;
+if(process.env.NODE_ENV == 'production'){
+    app.use(express.static(path.join(__dirname, '../client/build')));
 
-if(process.env.NODE_ENV == 'dev'){
-app.listen(process.env.PORT, () => {
- console.log(`app running on ${process.env.PORT} with ${process.env.NODE_ENV} mode`)
-  });
+    // Catch-all handler for any request that doesn’t match the API routes
+    app.get('*', (req, res) => {
+      res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+    });
+    app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 }else{
-    // Serve static files from the React app
-app.use(express.static(path.join(__dirname, '../client/build')));
-
-// Catch-all handler for any request that doesn’t match the API routes
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, '../client/build', 'index.html'));
-});
-const PORT = 8000
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+    app.listen(process.env.PORT, () => {
+        console.log(`app running on ${process.env.PORT} with ${process.env.NODE_ENV} mode`)
+         });
 }
