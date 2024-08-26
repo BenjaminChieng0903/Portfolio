@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "cd server && npm run start",
-    "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
