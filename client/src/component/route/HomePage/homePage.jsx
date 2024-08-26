@@ -14,35 +14,35 @@ const HomePage = () => {
   };
   const scienceIslandImages = importAllImages(
     require.context(
-      `/images/ScienceIsland`,
+      `../../../../public/images/ScienceIsland`,
       false,
       /\.(png|jpe?g|svg)$/
     )
   );
   const natoursImages = importAllImages(
     require.context(
-      `/images/Natours`,
+      `../../../../public/images/Natours`,
       false,
       /\.(png|jpe?g|svg)$/
     )
   );
   const musicEvent = importAllImages(
     require.context(
-      `/images/MusicEvent`,
+      `../../../../public/images/MusicEvent`,
       false,
       /\.(png|jpe?g|svg)$/
     )
   );
   const kingClothing = importAllImages(
     require.context(
-      `/images/KingClothing`,
+      `../../../../public/images/KingClothing`,
       false,
       /\.(png|jpe?g|svg)$/
     )
   );
   const aubot = importAllImages(
     require.context(
-      `/images/Aubot`,
+      `../../../../public/images/Aubot`,
       false,
       /\.(png|jpe?g|svg)$/
     )
@@ -109,8 +109,7 @@ const HomePage = () => {
           <span>(!)</span>
           <span className="any-section-title">&lt;Portfolio&gt;</span>
           <p className="any-section-intro portfolio-intro">
-            //.. All the projects were created from scratch, half of projects were developed individually 
-            and another half through teamwork. 
+            //.. All the projects were created from scratch, half of projects were developed individually and another half through teamwork. 
             The projects can be categorized as websites, web applications, 
             and systems. Three of them are currently in business use.
             

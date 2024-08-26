@@ -16,35 +16,35 @@ const Portoflio = () => {
   };
   const scienceIslandImages = importAllImages(
     require.context(
-      `/images/ScienceIsland`,
+      `../../../../public/images/ScienceIsland`,
       false,
       /\.(png|jpe?g|svg)$/
     )
   );
   const natoursImages = importAllImages(
     require.context(
-      `/images/Natours`,
+      `../../../../public/images/Natours`,
       false,
       /\.(png|jpe?g|svg)$/
     )
   );
   const musicEvent = importAllImages(
     require.context(
-      `/images/MusicEvent`,
+      `../../../../public/images/MusicEvent`,
       false,
       /\.(png|jpe?g|svg)$/
     )
   );
   const kingClothing = importAllImages(
     require.context(
-      `/images/KingClothing`,
+      `../../../../public/images/KingClothing`,
       false,
       /\.(png|jpe?g|svg)$/
     )
   );
   const aubot = importAllImages(
     require.context(
-      `/images/Aubot`,
+      `../../../../public/images/Aubot`,
       false,
       /\.(png|jpe?g|svg)$/
     )
@@ -116,8 +116,7 @@ const Portoflio = () => {
         <span className="portfolio-section-intro">
           …All the projects were created from scratch, 
           half of projects were developed individually and another half through teamwork. 
-          The projects can be categorized as websites, web applications, 
-          and systems. Three of them are currently in business use.
+          The projects can be categorized as websites, web applications, and systems. Three of them are currently in business use.
         </span>
       </header>
       <div className="background-image-container"></div>
