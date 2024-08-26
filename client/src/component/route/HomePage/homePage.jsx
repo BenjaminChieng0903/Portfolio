@@ -13,9 +13,9 @@ const HomePage = () => {
   //   return r.keys();
   // };
   const scienceIslandImages = [
-    '/images/ScienceIsland/SI-game-login.jpg',
-    '/images/ScienceIsland/SI-game-user.jpg',
-    '/images/ScienceIsland/SI-teacher-portal.jpg'
+    './images/ScienceIsland/SI-game-login.jpg',
+    './images/ScienceIsland/SI-game-user.jpg',
+    './images/ScienceIsland/SI-teacher-portal.jpg'
 
   ];
   
@@ -27,10 +27,10 @@ const HomePage = () => {
   //   )
   // );
   const natoursImages = [
-    '/images/Natours/NA-home-page.jpg',
-    '/images/Natours/NA-real-time-map.jpg',
-    '/images/Natours/NA-tour-detail.jpg',
-    '/images/Natours/NA-user-profile.jpg'
+    './images/Natours/NA-home-page.jpg',
+    './images/Natours/NA-real-time-map.jpg',
+    './images/Natours/NA-tour-detail.jpg',
+    './images/Natours/NA-user-profile.jpg'
 
   ];
   
@@ -42,11 +42,11 @@ const HomePage = () => {
   //   )
   // );
   const musicEvent = [
-    '/images/MusicEvent/ME-1.jpg',
-    '/images/MusicEvent/ME-2.jpg',
-    '/images/MusicEvent/ME-3.jpg',
-    '/images/MusicEvent/ME-4.jpg',
-    '/images/MusicEvent/ME-5.jpg'
+    './images/MusicEvent/ME-1.jpg',
+    './images/MusicEvent/ME-2.jpg',
+    './images/MusicEvent/ME-3.jpg',
+    './images/MusicEvent/ME-4.jpg',
+    './images/MusicEvent/ME-5.jpg'
   ];
   
   // importAllImages(
@@ -57,9 +57,9 @@ const HomePage = () => {
   //   )
   // );
   const kingClothing = [
-    '/images/KingClothing/KC-1.jpg',
-    '/images/KingClothing/KC-2.jpg',
-    '/images/KingClothing/KC-3.jpg'
+    './images/KingClothing/KC-1.jpg',
+    './images/KingClothing/KC-2.jpg',
+    './images/KingClothing/KC-3.jpg'
   ];
   
   // importAllImages(
@@ -71,9 +71,9 @@ const HomePage = () => {
   // );
 
   const aubot = [
-    '/images/Aubot/aubot-banner.jpg',
-    '/images/Aubot/aubot-course-description.jpg',
-    '/images/Aubot/aubot-test-templates.jpg'
+    './images/Aubot/aubot-banner.jpg',
+    './images/Aubot/aubot-course-description.jpg',
+    './images/Aubot/aubot-test-templates.jpg'
   ];
   
   // importAllImages(
