@@ -16,35 +16,35 @@ const Portoflio = () => {
   };
   const scienceIslandImages = importAllImages(
     require.context(
-      `../../../../public/images/ScienceIsland`,
+      `/images/ScienceIsland`,
       false,
       /\.(png|jpe?g|svg)$/
     )
   );
   const natoursImages = importAllImages(
     require.context(
-      `../../../../public/images/Natours`,
+      `/images/Natours`,
       false,
       /\.(png|jpe?g|svg)$/
     )
   );
   const musicEvent = importAllImages(
     require.context(
-      `../../../../public/images/MusicEvent`,
+      `/images/MusicEvent`,
       false,
       /\.(png|jpe?g|svg)$/
     )
   );
   const kingClothing = importAllImages(
     require.context(
-      `../../../../public/images/KingClothing`,
+      `/images/KingClothing`,
       false,
       /\.(png|jpe?g|svg)$/
     )
   );
   const aubot = importAllImages(
     require.context(
-      `../../../../public/images/Aubot`,
+      `/images/Aubot`,
       false,
       /\.(png|jpe?g|svg)$/
     )
