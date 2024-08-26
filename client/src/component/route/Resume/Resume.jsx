@@ -5,11 +5,33 @@ import ServiceTypingEffect from "../../TypingEffect/ServiceTypingEffect";
 const Resume = () => {
   const texts = ["Resume"];
   const titles = [
-    "Web/Web apps",
+    "Full-stack Developer",
     "Web Developer",
+    "Full-stack Developer",
     "Software Engineer",
-    "Full-stack Developer"
+    "Web Developer"
   ];
+  const workExperience = [{
+    company:"ByteCroniX",
+    period:"Jul 2024 - Present",
+    description: "Developing the immigration web app/mobile app for people who are struggling with immigration plan in Australia. As a full stack developer in the dev team, I’m responsible for web app front-end development, microservices architecture for mobile and web, and using Docker to create isolated environments for each service. Deployment with GCP and implement CI/CD pipeline. "
+  },{
+    company:"University of Melbourne",
+    period:"Sept 2023 - Nov 2023",
+    description: "Developing the Music Event System which is an online web application for people to order tickets for various music events. With incorporates multiple backend architecture designs without utilizing any frameworks to simulate mainstream framework such as SpringBoot. Experienced in implementing many back-end architecture designs particularly used in complex software."
+  },{
+    company:"Natours",
+    period:"Jul 2023 - Sept 2023",
+    description: "Creating the whole project from scratch individually to meet requirements of client. Responsible for full-stack development with React, Node.js, Express.js and MongoDB. Skilled in front-end UI/UX design and back-end architecture design with trending model such as MVC. Experienced in web deployment and MERN project testing. "
+  },{
+    company:"Swinburne University",
+    period:"Feb 2023 - Jun 2023",
+    description: "As a software engineer in the team, assisting dev team in writing tech documentation and building teaching portal and built-in game. specialized in fixing bugs and delivered clear, reusable logical code. Experienced in game development with Unity, plus some classical functionalities were frequently used in modern games. "
+  },{
+    company:"Aubot",
+    period:"Nov 2022 - Mar 2023",
+    description: "Creating the API that will receive the coding test results from students on the website and reformat the Python file templates via Python AST for further purposes. Additionally, participated in front-end page development and implemented back-end APIs’ logic. "
+  }];
   return (
     <div className="resume-container">
       <header className="child-hierarchy App-header-resume">
@@ -31,7 +53,8 @@ const Resume = () => {
           {titles.map((title, index) => {
             return (
               <>
-                <div className="grid-animation grid-border">
+              <div className="position-company-flexbox resume-grid-border">
+                <div className="resume-grid-animation">
                   <span>&#123;{index + 1}&#125;</span>
                   <ServiceTypingEffect
                     title={title}
@@ -40,13 +63,18 @@ const Resume = () => {
                     key={index}
                   />
                 </div>
-                <span className="grid-border grid-info-style">
-                  …lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Fusce ut dui tortor. Maecenas cursus velit sit amet orci
-                  tincidunt hendrerit. Etiam tincidunt nisl at nibh ullamcorper,
-                  at lacinia arcu egestas. Maecenas sed volutpat enim, ut
-                  vulputate sapien;
+                
+                <div className="company-period-flexbox">
+                <span>{workExperience[index].company}</span>
+                <span>{workExperience[index].period}</span>
+                </div>
+          
+                </div>
+                
+                <span className="resume-grid-border resume-grid-info-style">
+                 {workExperience[index].description}
                 </span>
+          
               </>
             );
           })}
