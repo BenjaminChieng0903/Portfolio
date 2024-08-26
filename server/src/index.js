@@ -17,7 +17,8 @@ app.use(cors());
 app.use(BASE_URL,indexRoutes);
 const PORT = process.env.PORT || 8000;
 if(process.env.NODE_ENV == 'production'){
-    app.use(express.static(path.join(__dirname, '../../client/build')));
+    app.use('/images', express.static(path.join(__dirname, '../../client/build/images')));
+
 
     // Catch-all handler for any request that doesn’t match the API routes
     app.get('*', (req, res) => {
