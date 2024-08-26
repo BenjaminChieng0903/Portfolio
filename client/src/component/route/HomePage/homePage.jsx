@@ -9,44 +9,80 @@ const HomePage = () => {
   const navRef = useOutletContext();
   //   const [scienceIslandImages, setScienceIslandImages] = useState([]);
 
-  const importAllImages = (r) => {
-    return r.keys();
-  };
-  const scienceIslandImages = importAllImages(
-    require.context(
-      `../../../../public/images/ScienceIsland`,
-      false,
-      /\.(png|jpe?g|svg)$/
-    )
-  );
-  const natoursImages = importAllImages(
-    require.context(
-      `../../../../public/images/Natours`,
-      false,
-      /\.(png|jpe?g|svg)$/
-    )
-  );
-  const musicEvent = importAllImages(
-    require.context(
-      `../../../../public/images/MusicEvent`,
-      false,
-      /\.(png|jpe?g|svg)$/
-    )
-  );
-  const kingClothing = importAllImages(
-    require.context(
-      `../../../../public/images/KingClothing`,
-      false,
-      /\.(png|jpe?g|svg)$/
-    )
-  );
-  const aubot = importAllImages(
-    require.context(
-      `../../../../public/images/Aubot`,
-      false,
-      /\.(png|jpe?g|svg)$/
-    )
-  );
+  // const importAllImages = (r) => {
+  //   return r.keys();
+  // };
+  const scienceIslandImages = [
+    '/images/ScienceIsland/SI-game-login.jpg',
+    '/images/ScienceIsland/SI-game-user.jpg',
+    '/images/ScienceIsland/SI-teacher-portal.jpg'
+
+  ];
+  
+  // importAllImages(
+  //   require.context(
+  //     `../images/ScienceIsland`,
+  //     false,
+  //     /\.(png|jpe?g|svg)$/
+  //   )
+  // );
+  const natoursImages = [
+    '/images/Natours/NA-home-page.jpg',
+    '/images/Natours/NA-real-time-map.jpg',
+    '/images/Natours/NA-tour-detail.jpg',
+    '/images/Natours/NA-user-profile.jpg'
+
+  ];
+  
+  // importAllImages(
+  //   require.context(
+  //     `../images/Natours`,
+  //     false,
+  //     /\.(png|jpe?g|svg)$/
+  //   )
+  // );
+  const musicEvent = [
+    '/images/MusicEvent/ME-1.jpg',
+    '/images/MusicEvent/ME-2.jpg',
+    '/images/MusicEvent/ME-3.jpg',
+    '/images/MusicEvent/ME-4.jpg',
+    '/images/MusicEvent/ME-5.jpg'
+  ];
+  
+  // importAllImages(
+  //   require.context(
+  //     `../images/MusicEvent`,
+  //     false,
+  //     /\.(png|jpe?g|svg)$/
+  //   )
+  // );
+  const kingClothing = [
+    '/images/KingClothing/KC-1.jpg',
+    '/images/KingClothing/KC-2.jpg',
+    '/images/KingClothing/KC-3.jpg'
+  ];
+  
+  // importAllImages(
+  //   require.context(
+  //     `../images/KingClothing`,
+  //     false,
+  //     /\.(png|jpe?g|svg)$/
+  //   )
+  // );
+
+  const aubot = [
+    '/images/Aubot/aubot-banner.jpg',
+    '/images/Aubot/aubot-course-description.jpg',
+    '/images/Aubot/aubot-test-templates.jpg'
+  ];
+  
+  // importAllImages(
+  //   require.context(
+  //     `../images/Aubot`,
+  //     false,
+  //     /\.(png|jpe?g|svg)$/
+  //   )
+  // );
   const scrollToSection = () => {
     navRef.current.scrollIntoView({
       behavior: "smooth"
@@ -127,7 +163,7 @@ const HomePage = () => {
                         target="_blank"
                       >
                         <img
-                          src={`${process.env.PUBLIC_URL}/images/natours/${item}`}
+                          src={item}
                         ></img>
                       </a>
                     );
@@ -144,7 +180,7 @@ const HomePage = () => {
                     return (
                       <a href="https://www.scienceisland.com/" target="_blank">
                         <img
-                          src={`${process.env.PUBLIC_URL}/images/scienceIsland/${item}`}
+                          src={item}
                         ></img>
                       </a>
                     );
@@ -169,7 +205,7 @@ const HomePage = () => {
                       target="_blank"
                     >
                       <img
-                        src={`${process.env.PUBLIC_URL}/images/musicEvent/${item}`}
+                        src={item}
                       ></img>
                     </a>
                   );
@@ -194,7 +230,7 @@ const HomePage = () => {
                       target="_blank"
                     >
                       <img
-                        src={`${process.env.PUBLIC_URL}/images/kingClothing/${item}`}
+                        src={item}
                       ></img>
                     </a>
                   );
@@ -220,7 +256,7 @@ const HomePage = () => {
                           target="_blank"
                         >
                           <img
-                            src={`${process.env.PUBLIC_URL}/images/aubot/${item}`}
+                            src={item}
                           ></img>
                         </a>
                       ) : (
@@ -229,7 +265,7 @@ const HomePage = () => {
                           target="_blank"
                         >
                           <img
-                            src={`${process.env.PUBLIC_URL}/images/aubot/${item}`}
+                            src={item}
                           ></img>
                         </a>
                       )}
