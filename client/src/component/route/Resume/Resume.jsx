@@ -38,9 +38,7 @@ const Resume = () => {
         <TypingEffectRewindSlow texts={texts} speed={150} />
 
         <span className="resume-section-intro">
-          …lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
-          facilisis mollis mauris, vitae mollis leo viverra eu. In cursus
-          commodo interdum.
+          …Over 4 years of experience in web development, with strong eager of learning and collaborating.
         </span>
       </header>
       <div className="view-window child-hierarchy"></div>
@@ -84,38 +82,35 @@ const Resume = () => {
           <div className="skills">
             <div className="traits-container">
               <span>&#123;/&#125;</span>
-              <span>_react.js & node.js & express.js</span>
+              <span>_react.js & node.js & express.js & redux</span>
               <span>
-                ...lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
-                leo.
+                ...Proficient in web development with MERN stack. Has many hands-on projects development experience.
+                Specialized in applying methodologies into development such as MVC and RESTFulAPI. Experienced on complex software 
+                architecture design for both front-end and back-end, such as microservices.
               </span>
             </div>
             <div className="traits-container">
               <span>&#123;!&#125;</span>
-              <span>_javascript & typescript & html & css</span>
+              <span>_typescript & javascript & html & css</span>
               <span>
-                ...lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
-                leo.
+                ...Can use these skills to write clean and resuable code for front-end to present a beautiful UI with both static and dynamic effects.
+                Be able to write complex components for reuse purposes. Expert in front-end architecture design and route design.
               </span>
             </div>
             <div className="traits-container">
               <span>&#123;#&#125;</span>
               <span>_mongodb & mysql & postgres</span>
               <span>
-                ...lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
-                leo.
+                ...Experienced in both non-relational database and relational database. Skilled in SQL, 
+                including DDL and DML operations, also experienced in performing CRUD operations and managing 
+                complex business transactions.
               </span>
             </div>
             <div className="traits-container">
               <span>&#123;%&#125;</span>
-              <span>_gcp & ci/cd pipeline</span>
+              <span>_docker & ci/cd pipeline</span>
               <span>
-                ...lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus
-                leo.
+                ...Experienced in microservices implementation with docker. Applied ci/cd pipeline and cloud deployment for each services with gcp.
               </span>
             </div>
           </div>
