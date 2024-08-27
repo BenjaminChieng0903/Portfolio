@@ -47,14 +47,14 @@ const TypingEffect = ({ title, speed, index }) => {
 
   return (
     <div className={`service-bar-${index}`}>
-      <span className="typing-line-size">&#123; &quot;</span>
+      <span className="typing-effect-typing-line-size">&#123; &quot;</span>
       <span
         ref={(el) => addSectionRef(el, index)}
         className={`service-bar-title typing-effect-${index}`}
       >
         {displayedText}
       </span>
-      <span className="typing-line-size">&quot; &#125;</span>
+      <span className="typing-effect-typing-line-size">&quot; &#125;</span>
     </div>
   );
 };

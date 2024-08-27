@@ -37,9 +37,9 @@ const TypingEffectRewind = ({ texts, speed }) => {
 
   return (
     <div className="typingContainer">
-      <span className="typing-line-size">&#123; &quot;</span>
+      <span className="typing-effect-rewind-typing-line-size">&#123; &quot;</span>
       <span className="typing-effect">{displayedText}</span>
-      <span className="typing-line-size">&quot; &#125;</span>
+      <span className="typing-effect-rewind-typing-line-size">&quot; &#125;</span>
     </div>
   );
 };
