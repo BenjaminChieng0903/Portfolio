@@ -277,3 +277,60 @@ img:hover {
   gap: 24px;
   align-items: center;
 }
+
+@media only screen and (max-width: 480px){
+  .scrollable-content-top {
+    display: none;
+    transform: translateX(-50%);
+    /* right: 5%; */
+    bottom: 12%;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../../../public/images/working-picture.jpg");
+    width: 100;
+    overflow: hidden;
+  }
+  .background-image-container {
+    display: none;
+  }
+  .view-window{
+    display: none;
+  }
+  .home-page-body-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    
+    background-color:#f2dd1f;
+    padding-top: 20px;
+    justify-content: center;
+    gap: 20px;
+    /* align-items: center; */
+  }
+
+  .details-grid {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+  }
+  .details-grid-intro {
+    color: white;
+  
+    font-family: "Courier New", Courier, monospace;
+    font-size: 24px;
+    padding: 16px;
+    text-decoration: underline;
+    border-top: 0.5px inset #aba8a7;
+    border-right: 0.5px outset #aba8a7;
+    /* align-self: flex-end; */
+  }
+  .details-grid-tech-skills {
+    font-family: "Courier New", Courier, monospace;
+    color: white;
+    font-size: 16px;
+    padding: 16px;
+    /* text-decoration: underline; */
+    border-top: 0.5px inset #aba8a7;
+    border-right: 0.5px outset #aba8a7;
+  }
+}
