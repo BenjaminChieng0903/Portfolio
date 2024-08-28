@@ -4,6 +4,7 @@ import "./Resume.css";
 import ServiceTypingEffect from "../../TypingEffect/ServiceTypingEffect";
 const Resume = () => {
   const texts = ["Resume"];
+  const backgroundImage = "./images/selfie.jpg";
   const titles = [
     "Full-stack Developer",
     "Web Developer",
@@ -43,7 +44,7 @@ const Resume = () => {
       </header>
       <div className="view-window child-hierarchy"></div>
       <div className="background-image-container">
-        <div className="scrollable-content-top"></div>
+        <div className="scrollable-content-top" style={{ backgroundImage: `url(${backgroundImage})` }}></div>
       </div>
       <div className="resume-page-body-container child-hierarchy">
         <span className="any-section-title">&lt;Experience&gt;</span>

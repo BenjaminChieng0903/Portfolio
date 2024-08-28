@@ -3,6 +3,7 @@ import TypingEffectRewindSlow from "../../TypingEffect/TypingEffectRewindSlow";
 import "./AboutPage.css";
 const AboutPage = () => {
   const texts = ["About me"];
+  const backgroundImage = "./images/selfie.jpg";
   return (
     <div className="About-me-container">
       <header className="child-hierarchy App-header-about">
@@ -23,7 +24,7 @@ const AboutPage = () => {
       </header>
       <div className="view-window child-hierarchy"></div>
       <div className="background-image-container">
-        <div className="scrollable-content-top"></div>
+        <div className="scrollable-content-top" style={{ backgroundImage: `url(${backgroundImage})` }}></div>
       </div>
       <div className="about-page-body-container child-hierarchy">
         <section className="drives-section">

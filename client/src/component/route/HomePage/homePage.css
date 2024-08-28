@@ -1,3 +1,4 @@
+
 .App {
   display: flex;
   flex-direction: column;
@@ -101,6 +102,11 @@ button {
   justify-content: center;
   background-color: #282c34;
 }
+/* .background-image{
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+} */
 .scrollable-content-top {
   position: fixed;
   z-index: -1;
@@ -112,7 +118,7 @@ button {
   bottom: 12%;
   background-size: cover;
   background-position: center;
-  background-image: url("../../../../public/images/selfie.jpg");
+  /* background-image: url("../../../../public/images/selfie.jpg"); */
   width: 90%;
   height: 75%;
   overflow: hidden;

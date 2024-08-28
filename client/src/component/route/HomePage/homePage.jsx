@@ -7,6 +7,7 @@ import COntactMe from "../../ContactMe/ContactMe";
 const HomePage = () => {
   const texts = ["Web Developer", "Software Engineer", "Full-stack Developer"];
   const navRef = useOutletContext();
+  const backgroundImage = "./images/selfie.jpg";
   //   const [scienceIslandImages, setScienceIslandImages] = useState([]);
 
   // const importAllImages = (r) => {
@@ -101,7 +102,9 @@ const HomePage = () => {
       </header>
       <div className="view-window child-hierarchy"></div>
       <div className="background-image-container">
-        <div className="scrollable-content-top"></div>
+        <div className="scrollable-content-top" style={{ backgroundImage: `url(${backgroundImage})` }}>
+          {/* <img className="background-image" src="./images/selfie.jpg"/> */}
+        </div>
       </div>
       <div className="home-page-body-container child-hierarchy">
         <section className="about-me-section">
