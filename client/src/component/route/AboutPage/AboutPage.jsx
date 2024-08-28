@@ -3,7 +3,7 @@ import TypingEffectRewindSlow from "../../TypingEffect/TypingEffectRewindSlow";
 import "./AboutPage.css";
 const AboutPage = () => {
   const texts = ["About me"];
-  const backgroundImage = "./images/selfie.jpg";
+  const backgroundImage = "./images/Selfie/selfie.jpg";
   return (
     <div className="About-me-container">
       <header className="child-hierarchy App-header-about">

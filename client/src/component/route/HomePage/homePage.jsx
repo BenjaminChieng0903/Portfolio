@@ -7,7 +7,7 @@ import COntactMe from "../../ContactMe/ContactMe";
 const HomePage = () => {
   const texts = ["Web Developer", "Software Engineer", "Full-stack Developer"];
   const navRef = useOutletContext();
-  const backgroundImage = "./images/selfie.jpg";
+  const backgroundImage = "./images/Selfie/selfie.jpg";
   //   const [scienceIslandImages, setScienceIslandImages] = useState([]);
 
   // const importAllImages = (r) => {

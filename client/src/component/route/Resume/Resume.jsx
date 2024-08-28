@@ -4,7 +4,7 @@ import "./Resume.css";
 import ServiceTypingEffect from "../../TypingEffect/ServiceTypingEffect";
 const Resume = () => {
   const texts = ["Resume"];
-  const backgroundImage = "./images/selfie.jpg";
+  const backgroundImage = "./images/Selfie/selfie.jpg";
   const titles = [
     "Full-stack Developer",
     "Web Developer",
