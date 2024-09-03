@@ -107,6 +107,7 @@ footer {
     gap: 20px;
     background-color: #282c34;
     padding: 20px;
+    overflow-x: hidden;
   }
   .menu-toggle {
     display: block; /* Show the toggle button */
@@ -130,5 +131,17 @@ footer {
     flex-direction: column;
     gap: 20px; /* Show navigation items when menu is open */
   }
+  footer {
+    background-color: #282c34;
+    position: relative;
+    z-index: 2;
+    border-top: 1px outset #282c34;
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr;
+    column-gap: 12px;
+    width: 100%;
+    padding: 12px;
+  }
+
 
 }

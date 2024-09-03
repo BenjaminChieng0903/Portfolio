@@ -28,7 +28,7 @@ const NavigationBar = () => {
           class="fixed-image"
         />
       </div>
-      <div className=" nav-container" ref={navRef}>
+      <div className="nav-container" ref={navRef}>
         <span className="container-el"></span>
         <div className="menu-toggle" onClick={toggleMenu}>
         <img src="./images/icons8-menu-50.png"/>
