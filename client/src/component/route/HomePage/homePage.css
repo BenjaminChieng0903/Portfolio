@@ -27,6 +27,7 @@
   align-items: center;
   /* justify-content: center; */
   padding-top: 60px;
+  padding-left: 24px;
   font-size: calc(10px + 2vmin);
   color: white;
   gap: 40px;
@@ -299,6 +300,10 @@ img:hover {
   .view-window{
     display: none;
   }
+  .self-intro {
+    font-size: 15px;
+    font-family: "Courier New", Courier, monospace;
+  }
   .home-page-body-container {
     display: flex;
     flex-direction: column;
@@ -309,6 +314,7 @@ img:hover {
     padding-top: 20px;
     justify-content: center;
     gap: 20px;
+    padding-left: 25px;
     /* align-items: center; */
   }
   .details-grid {
@@ -321,7 +327,7 @@ img:hover {
   
     font-family: "Courier New", Courier, monospace;
     font-size: 24px;
-    padding: 16px;
+    padding: 32px;
     text-decoration: underline;
     border-top: 0.5px inset #aba8a7;
     border-right: 0.5px outset #aba8a7;
@@ -384,5 +390,20 @@ img:hover {
   .highlighter {
     color: #f2dd1f;
     font-size: 16px;
+  }
+  .services-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
+  .service-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    gap: 40px;
+    color: #8d69e0;
   }
 }

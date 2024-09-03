@@ -137,10 +137,10 @@ footer {
     z-index: 2;
     border-top: 1px outset #282c34;
     display: grid;
-    grid-template-columns: 0.8fr 0.8fr;
-    column-gap: 12px;
+    grid-template-columns: 1fr 0.8fr;
+    column-gap: 20px;
     width: 100%;
-    padding: 12px;
+    padding: 20px;
   }
 
 
