@@ -292,14 +292,6 @@ img:hover {
 @media only screen and (max-width: 480px){
   .scrollable-content-top {
     display: none;
-    transform: translateX(-50%);
-    /* right: 5%; */
-    bottom: 12%;
-    background-size: cover;
-    background-position: center;
-    background-image: url("../../../../public/images/working-picture.jpg");
-    width: 100;
-    overflow: hidden;
   }
   .background-image-container {
     display: none;
