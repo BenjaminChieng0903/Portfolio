@@ -288,3 +288,109 @@ img:hover {
   gap: 24px;
   align-items: center;
 }
+
+@media only screen and (max-width: 480px){
+  .scrollable-content-top {
+    display: none;
+    transform: translateX(-50%);
+    /* right: 5%; */
+    bottom: 12%;
+    background-size: cover;
+    background-position: center;
+    background-image: url("../../../../public/images/working-picture.jpg");
+    width: 100;
+    overflow: hidden;
+  }
+  .background-image-container {
+    display: none;
+  }
+  .view-window{
+    display: none;
+  }
+  .home-page-body-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    
+    background-color:#282c34;
+    padding-top: 20px;
+    justify-content: center;
+    gap: 20px;
+    /* align-items: center; */
+  }
+  .details-grid {
+    display: grid;
+    grid-template-rows: 0.7fr 1fr;
+    grid-template-columns: none;
+  }
+  .details-grid-intro {
+    color: white;
+  
+    font-family: "Courier New", Courier, monospace;
+    font-size: 24px;
+    padding: 16px;
+    text-decoration: underline;
+    border-top: 0.5px inset #aba8a7;
+    border-right: 0.5px outset #aba8a7;
+    /* align-self: flex-end; */
+  }
+  .details-grid-tech-skills {
+    font-family: "Courier New", Courier, monospace;
+    color: white;
+    font-size: 16px;
+    padding: 32px;
+    /* text-decoration: underline; */
+    border-top: 0.5px inset #aba8a7;
+    border-right: 0.5px outset #aba8a7;
+  }
+  .portfolio {
+    display: grid;
+    width: 100%;
+    grid-template-columns: none;
+    grid-template-rows: 1fr 0.5fr 0.3fr 0.4fr;
+  }
+  .portfolio-flex-box-row {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+  .portfolio-grid-row {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .portfolio-flex-box-column {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    height: auto;
+    flex: none;
+  }
+  .any-section-title {
+    width: 100%;
+    font-size: 24px;
+    color: white;
+  }
+  .any-section-intro {
+    font-family: "Courier New", Courier, monospace;
+    color: #f2dd1f;
+    padding: 24px;
+    font-size: 16px;
+  }
+  .details-grid-intro {
+    color: white;
+  
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    padding: 32px;
+    text-decoration: underline;
+    border-top: 0.5px inset #aba8a7;
+    border-right: 0.5px outset #aba8a7;
+    /* align-self: flex-end; */
+  }
+  .highlighter {
+    color: #f2dd1f;
+    font-size: 16px;
+  }
+}

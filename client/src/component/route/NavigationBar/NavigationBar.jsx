@@ -5,6 +5,9 @@ import { useRef, useState } from "react";
 const NavigationBar = () => {
   const navigate = useNavigate();
   const navRef = useRef(null);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isMobile = window.innerWidth <= 480;
+
   const navDetailsArray = [
     "_home",
     "_about",
@@ -14,7 +17,9 @@ const NavigationBar = () => {
     "_contact",
   ];
   const [activeIndex, setActiveIndex] = useState(0);
-
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
   return (
     <>
       <div className="fixed-image-container">
@@ -23,9 +28,12 @@ const NavigationBar = () => {
           class="fixed-image"
         />
       </div>
-      <div className=" nav-container" ref={navRef}>
+      <div className="nav-container" ref={navRef}>
         <span className="container-el"></span>
-        <div className="nav-details">
+        <div className="menu-toggle" onClick={toggleMenu}>
+        <img src="./images/icons8-menu-50.png"/>
+      </div>
+        <div className={`nav-details${isMenuOpen ? "-open" : ""}`}>
           {navDetailsArray.map((item, index) => {
             return (
               <span
