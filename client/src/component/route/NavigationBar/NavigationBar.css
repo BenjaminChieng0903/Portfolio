@@ -100,6 +100,14 @@ footer {
 }
 
 @media only screen and (max-width: 480px) {
+  .fixed-image-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 30px; /* Adjust the width as needed */
+  height: 100vh; /* Full height */
+  z-index: -10; /* Ensure it stays above other content */
+}
   .nav-container {
     display: flex;
     flex-direction: row;

@@ -298,7 +298,7 @@ img:hover {
     display: none;
   }
   .self-intro {
-    font-size: 15px;
+    font-size: 20px;
     font-family: "Courier New", Courier, monospace;
   }
   .home-page-body-container {
@@ -318,6 +318,7 @@ img:hover {
     display: grid;
     grid-template-rows: 0.7fr 1fr;
     grid-template-columns: none;
+    padding: 24px;
   }
   .details-grid-intro {
     color: white;
@@ -334,7 +335,7 @@ img:hover {
     font-family: "Courier New", Courier, monospace;
     color: white;
     font-size: 16px;
-    padding: 32px;
+    /* padding: 32px; */
     /* text-decoration: underline; */
     border-top: 0.5px inset #aba8a7;
     border-right: 0.5px outset #aba8a7;
@@ -364,7 +365,7 @@ img:hover {
   }
   .any-section-title {
     width: 100%;
-    font-size: 24px;
+    font-size: 16px;
     color: white;
   }
   .any-section-intro {

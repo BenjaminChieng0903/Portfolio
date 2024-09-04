@@ -25,3 +25,17 @@
   font-size: 64px;
   font-weight: 100;
 }
+@media only screen and (max-width: 480px){
+  .typing-effect-slow {
+    font-size: 24px;
+    color: #4791e1;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid orange;
+    animation: service-title-blink-caret 0.75s step-end infinite;
+  }
+  .typing-line-size-slow {
+    font-size: 24px;
+    font-weight: 100;
+  }
+}
