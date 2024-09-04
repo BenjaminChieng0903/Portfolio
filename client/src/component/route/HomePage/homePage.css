@@ -404,4 +404,16 @@ img:hover {
     gap: 40px;
     color: #8d69e0;
   }
+  .img-title {
+    font-size: 12px;
+  
+    color: white;
+    /* font-family: "Courier New", Courier, monospace; */
+  }
+  .img-text {
+    font-size: 12px;
+    font-family: "Courier New", Courier, monospace;
+    color: #f2dd1f;
+    font-weight: bold;
+  }
 }
