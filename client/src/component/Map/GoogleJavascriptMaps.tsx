@@ -1,7 +1,7 @@
 import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps";
+
 const GoogleJavascriptMaps = () => {
-  const API_KEY =
-    globalThis.GOOGLE_MAPS_API_KEY ?? process.env.GOOGLE_MAPS_API_KEY;
+  const API_KEY = process.env.GOOGLE_MAPS_API_KEY as string;
   const position = { lat: -37.81521987915039, lng: 144.9383544921875 };
   return (
     <APIProvider

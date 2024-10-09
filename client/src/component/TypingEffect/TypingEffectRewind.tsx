@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import "./TypingEffectRewind.css";
+import { PropsTypeTypingEffectRewind } from "./typeInterface/PropsTypeTypingEffectRewind";
+const TypingEffectRewind = (props: PropsTypeTypingEffectRewind) => {
 
-const TypingEffectRewind = ({ texts, speed }) => {
+  const {texts , speed} = props;
   const [displayedText, setDisplayedText] = useState("");
   const [loopNum, setLoopNum] = useState(0);
   const [typingSpeed, setTypingSpeed] = useState(speed);

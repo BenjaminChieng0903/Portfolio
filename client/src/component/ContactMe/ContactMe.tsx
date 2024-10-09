@@ -7,7 +7,7 @@ const COntactMe = () => {
   const [email, setEmail] = useState('');
 
  
-const submitEnquiry = async(e)=>{
+const submitEnquiry = async(e : React.FormEvent<HTMLFormElement>)=>{
   e.preventDefault();
   await axiosApi.post('/home/submit',{
     name: name,
@@ -28,13 +28,13 @@ const submitEnquiry = async(e)=>{
         //.. Contact/Enquire the future rising star in IT industry
       </p>
       <form className="contact-form" onSubmit={(e)=>submitEnquiry(e)}>
-        <input type="text" placeholder="_name*" required onChange={(e)=>setName(e.target.value)}></input>
-        <input type="email" placeholder="_email*" required onChange={(e)=>setEmail(e.target.value)}></input>
+        <input type="text" placeholder="_name*" required onChange={(e)=>setName(e?.target.value)}></input>
+        <input type="email" placeholder="_email*" required onChange={(e)=>setEmail(e?.target.value)}></input>
         <textarea
           className="message"
           placeholder="_message*"
           required
-          onChange={(e)=>setText(e.target.value)}
+          onChange={(e)=>setText(e?.target.value)}
         ></textarea> 
         <button className="homepage-button" type="submit">&#123;send&#125;</button>
       </form>

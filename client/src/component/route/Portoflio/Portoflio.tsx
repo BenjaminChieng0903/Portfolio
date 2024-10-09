@@ -1,7 +1,17 @@
+import { type } from "os";
 import { useState } from "react";
 import COntactMe from "../../ContactMe/ContactMe";
 import TypingEffectRewindSlow from "../../TypingEffect/TypingEffectRewindSlow";
 import "./Portoflio.css";
+type ProjectInfo = 
+  {
+  name: string,
+  type: string,
+  photos: string[],
+  link: string[],
+  text: string
+  }[];
+
 const Portoflio = () => {
   const texts = ["Portfolio"];
   const filterTitle = [
@@ -74,7 +84,7 @@ const Portoflio = () => {
     './images/Aubot/aubot-course-description.jpg',
     './images/Aubot/aubot-test-templates.jpg'
   ];
-  const projectInfo = [
+  const projectInfo : ProjectInfo = [
     {
       name: "natours",
       type: "Web Development",

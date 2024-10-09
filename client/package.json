@@ -18,9 +18,10 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "build": "react-scripts build",
+    "type-check": "tsc --noEmit"
   },
   "eslintConfig": {
     "extends": [
@@ -42,6 +43,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
+    "@types/react-router-dom": "^5.3.3",
     "eslint": "^7.0.0",
     "eslint-plugin-react": "^7.35.0",
     "globals": "^15.8.0"

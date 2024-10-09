@@ -1,10 +1,13 @@
 import { useEffect, useRef, useState } from "react";
-import "./TypeingEffect.css";
+import "./ServiceTypingEffect.css";
+import { PropsTypeTypingEffect } from "./typeInterface/PropsTypeTypingEffect";
 
-const TypingEffect = ({ title, speed, index }) => {
+const ServiceTypingEffect = (props: PropsTypeTypingEffect) => {
   const [displayedText, setDisplayedText] = useState("");
-  const sectionsRef = useRef([]);
-  const timerRef = useRef([]);
+  const sectionsRef = useRef<HTMLSpanElement[]>([]);
+  const timerRef = useRef<NodeJS.Timeout[]>([]);
+
+  const {title, speed, index} = props;
 
   const handleScroll = () => {
     sectionsRef.current.forEach((section, i) => {
@@ -18,7 +21,7 @@ const TypingEffect = ({ title, speed, index }) => {
                 const nextText = title.substring(0, prev.length + 1);
                 if (nextText.length === title.length) {
                   clearInterval(timerRef.current[i]);
-                  timerRef.current[i] = null;
+                  // timerRef.current[i] = null;
                 }
                 return nextText;
               });
@@ -39,24 +42,24 @@ const TypingEffect = ({ title, speed, index }) => {
       timerRef.current.forEach((timer) => clearInterval(timer));
     };
   }, []);
-  const addSectionRef = (el, index) => {
+  const addSectionRef = (el: HTMLSpanElement | null, index: number) => {
     if (el && !sectionsRef.current.includes(el)) {
       sectionsRef.current[index] = el;
     }
   };
 
   return (
-    <div className={`service-bar-${index}`}>
-      <span className="typing-effect-typing-line-size">&#123; &quot;</span>
+    <div className="typing-container">
+      <span className="service-typing-line-size">&lt; </span>
       <span
+        className="displayedText service-typing-effect"
         ref={(el) => addSectionRef(el, index)}
-        className={`service-bar-title typing-effect-${index}`}
       >
         {displayedText}
       </span>
-      <span className="typing-effect-typing-line-size">&quot; &#125;</span>
+      <span className="service-typing-line-size"> &gt;</span>
     </div>
   );
 };
 
-export default TypingEffect;
+export default ServiceTypingEffect;

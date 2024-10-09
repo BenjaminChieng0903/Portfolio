@@ -6,7 +6,7 @@ import COntactMe from "../../ContactMe/ContactMe";
 
 const HomePage = () => {
   const texts = ["Web Developer", "Software Engineer", "Full-stack Developer"];
-  const navRef = useOutletContext();
+  const navRef = useOutletContext<React.RefObject<HTMLDivElement>>();
   const backgroundImage = "./images/Selfie/selfie.jpg";
   //   const [scienceIslandImages, setScienceIslandImages] = useState([]);
 
@@ -85,7 +85,7 @@ const HomePage = () => {
   //   )
   // );
   const scrollToSection = () => {
-    navRef.current.scrollIntoView({
+    navRef.current?.scrollIntoView({
       behavior: "smooth"
     });
   };
@@ -94,10 +94,10 @@ const HomePage = () => {
       <header className="child-hierarchy App-header">
         <span className="self-intro">Hi, I'm BENJAMIN QIAN, A....</span>
         <TypingEffectRewind texts={texts} speed={150} />
-        <button class="arrow-button">
-          <div class="line"></div>
-          <div class="line"></div>
-          <div class="arrow"></div>
+        <button className="arrow-button">
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="arrow"></div>
         </button>
       </header>
       <div className="view-window child-hierarchy"></div>
