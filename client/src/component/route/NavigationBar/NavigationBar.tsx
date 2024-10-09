@@ -4,9 +4,9 @@ import { useRef, useState } from "react";
 
 const NavigationBar = () => {
   const navigate = useNavigate();
-  const navRef = useRef(null);
+  const navRef = useRef<HTMLDivElement>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const isMobile = window.innerWidth <= 480;
+
 
   const navDetailsArray = [
     "_home",
@@ -25,7 +25,7 @@ const NavigationBar = () => {
       <div className="fixed-image-container">
         <img
           src={`${process.env.PUBLIC_URL}/images/code-line.jpg`}
-          class="fixed-image"
+          className="fixed-image"
         />
       </div>
       <div className="nav-container" ref={navRef}>

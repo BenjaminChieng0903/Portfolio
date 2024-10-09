@@ -29,3 +29,5 @@ if(process.env.NODE_ENV == 'production'){
         console.log(`app running on ${process.env.PORT} with ${process.env.NODE_ENV} mode`)
          });
 }
+
+module.exports = app;
