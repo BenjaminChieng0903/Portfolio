@@ -1,10 +1,11 @@
-import COntactMe from "../../ContactMe/ContactMe";
-import GoogleJavascriptMaps from "../../Map/GoogleJavascriptMaps";
-import TypingEffectRewindSlow from "../../TypingEffect/TypingEffectRewindSlow";
-import "./ContactPage.css";
+import React from 'react'
+import COntactMe from '../../ContactMe/ContactMe'
+import GoogleJavascriptMaps from '../../Map/GoogleJavascriptMaps'
+import TypingEffectRewindSlow from '../../TypingEffect/TypingEffectRewindSlow'
+import './ContactPage.css'
 
 const ContactPage = () => {
-  const texts = ["Contact"];
+  const texts = ['Contact']
   return (
     <div className="contact-me-container">
       <header className="App-header-contact">
@@ -30,7 +31,7 @@ const ContactPage = () => {
         <GoogleJavascriptMaps></GoogleJavascriptMaps>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default ContactPage;
+export default ContactPage

@@ -4,7 +4,7 @@
 .service-typing-line-size {
   font-size: 36px;
   color: white;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 .typing-container {
   width: 100%;
@@ -26,7 +26,7 @@
     border-color: #8d69e0;
   }
 }
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 480px) {
   .typing-container {
     width: 100%;
   }
@@ -41,6 +41,6 @@
   .service-typing-line-size {
     font-size: 20px;
     color: white;
-    font-family: "Courier New", Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
   }
 }

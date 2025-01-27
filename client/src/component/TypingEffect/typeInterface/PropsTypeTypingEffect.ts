@@ -1,5 +1,5 @@
 export interface PropsTypeTypingEffect {
-    title: string,
-    speed: number,
-    index: number
-  }
+  title: string
+  speed: number
+  index: number
+}

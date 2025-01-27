@@ -1,33 +1,31 @@
-import { type } from "os";
-import { useState } from "react";
-import COntactMe from "../../ContactMe/ContactMe";
-import TypingEffectRewindSlow from "../../TypingEffect/TypingEffectRewindSlow";
-import "./Portoflio.css";
-type ProjectInfo = 
-  {
-  name: string,
-  type: string,
-  photos: string[],
-  link: string[],
+import React from 'react'
+import { useState } from 'react'
+import COntactMe from '../../ContactMe/ContactMe'
+import TypingEffectRewindSlow from '../../TypingEffect/TypingEffectRewindSlow'
+import './Portoflio.css'
+type ProjectInfo = {
+  name: string
+  type: string
+  photos: string[]
+  link: string[]
   text: string
-  }[];
+}[]
 
 const Portoflio = () => {
-  const texts = ["Portfolio"];
+  const texts = ['Portfolio']
   const filterTitle = [
-    "All Projects",
-    "Web Development",
-    "Web Application",
-    "System"
-  ];
-  const [activeIndex, setActiveIndex] = useState(0);
+    'All Projects',
+    'Web Development',
+    'Web Application',
+    'System',
+  ]
+  const [activeIndex, setActiveIndex] = useState(0)
   const scienceIslandImages = [
     './images/ScienceIsland/SI-game-login.jpg',
     './images/ScienceIsland/SI-game-user.jpg',
-    './images/ScienceIsland/SI-teacher-portal.jpg'
+    './images/ScienceIsland/SI-teacher-portal.jpg',
+  ]
 
-  ];
-  
   // importAllImages(
   //   require.context(
   //     `../images/ScienceIsland`,
@@ -39,10 +37,9 @@ const Portoflio = () => {
     './images/Natours/NA-home-page.jpg',
     './images/Natours/NA-real-time-map.jpg',
     './images/Natours/NA-tour-detail.jpg',
-    './images/Natours/NA-user-profile.jpg'
+    './images/Natours/NA-user-profile.jpg',
+  ]
 
-  ];
-  
   // importAllImages(
   //   require.context(
   //     `../images/Natours`,
@@ -55,9 +52,9 @@ const Portoflio = () => {
     './images/MusicEvent/ME-2.jpg',
     './images/MusicEvent/ME-3.jpg',
     './images/MusicEvent/ME-4.jpg',
-    './images/MusicEvent/ME-5.jpg'
-  ];
-  
+    './images/MusicEvent/ME-5.jpg',
+  ]
+
   // importAllImages(
   //   require.context(
   //     `../images/MusicEvent`,
@@ -68,9 +65,9 @@ const Portoflio = () => {
   const kingClothing = [
     './images/KingClothing/KC-1.jpg',
     './images/KingClothing/KC-2.jpg',
-    './images/KingClothing/KC-3.jpg'
-  ];
-  
+    './images/KingClothing/KC-3.jpg',
+  ]
+
   // importAllImages(
   //   require.context(
   //     `../images/KingClothing`,
@@ -82,76 +79,77 @@ const Portoflio = () => {
   const aubot = [
     './images/Aubot/aubot-banner.jpg',
     './images/Aubot/aubot-course-description.jpg',
-    './images/Aubot/aubot-test-templates.jpg'
-  ];
-  const projectInfo : ProjectInfo = [
+    './images/Aubot/aubot-test-templates.jpg',
+  ]
+  const projectInfo: ProjectInfo = [
     {
-      name: "natours",
-      type: "Web Development",
+      name: 'natours',
+      type: 'Web Development',
       photos: natoursImages,
-      link: ["https://github.com/BenjaminChieng0903/Natours"],
-      text: "//.. Natours is a tourism website that introduces exciting tours in America to customers."
+      link: ['https://github.com/BenjaminChieng0903/Natours'],
+      text: '//.. Natours is a tourism website that introduces exciting tours in America to customers.',
     },
     {
-      name: "scienceIsland",
-      type: "Web Application",
+      name: 'scienceIsland',
+      type: 'Web Application',
       photos: scienceIslandImages,
-      link: ["https://www.scienceisland.com/"],
-      text: "//.. Science Island is an engaging game-based online educational platform tailored for children aged eight to thirteen, focused on imparting STEM knowledge."
+      link: ['https://www.scienceisland.com/'],
+      text: '//.. Science Island is an engaging game-based online educational platform tailored for children aged eight to thirteen, focused on imparting STEM knowledge.',
     },
     {
-      name: "musicEvent",
-      type: "System",
+      name: 'musicEvent',
+      type: 'System',
       photos: musicEvent,
-      link: ["https://github.com/SWEN900072023/Green-Day"],
-      text: "//.. The Music Event System is an online website for people to order tickets for various music events. The system with beautiful UI incorporates multiple backend architecture designs without utilizing any frameworks"
+      link: ['https://github.com/SWEN900072023/Green-Day'],
+      text: '//.. The Music Event System is an online website for people to order tickets for various music events. The system with beautiful UI incorporates multiple backend architecture designs without utilizing any frameworks',
     },
     {
-      name: "kingClothing",
-      type: "Web Development",
+      name: 'kingClothing',
+      type: 'Web Development',
       photos: kingClothing,
-      link: ["https://benevolent-basbousa-bf8c47.netlify.app/"],
-      text: "//.. King-Clothing is an online e-commerce platform specializing in fashion-forward apparel. Utilizing cutting-edge front-end techniques and stunning web design."
+      link: ['https://benevolent-basbousa-bf8c47.netlify.app/'],
+      text: '//.. King-Clothing is an online e-commerce platform specializing in fashion-forward apparel. Utilizing cutting-edge front-end techniques and stunning web design.',
     },
     {
-      name: "aubot",
-      type: "Web Application",
+      name: 'aubot',
+      type: 'Web Application',
       photos: aubot,
       link: [
-        "https://aubot-academy.webflow.io/",
-        "https://github.com/BenjaminChieng0903/Python-AST"
+        'https://aubot-academy.webflow.io/',
+        'https://github.com/BenjaminChieng0903/Python-AST',
       ],
-      text: "//.. 'Aubot academy' which is an online educational platform to teach programming languages to Australian students from year 1 to year 12. Students can learn contemporary mainstream programming languages and skills such as Java, Python etc."
-    }
-  ];
-  const [projects, setProjects] = useState(projectInfo);
+      text: "//.. 'Aubot academy' which is an online educational platform to teach programming languages to Australian students from year 1 to year 12. Students can learn contemporary mainstream programming languages and skills such as Java, Python etc.",
+    },
+  ]
+  const [projects, setProjects] = useState(projectInfo)
   const nonFilter = () => {
-    setProjects(projectInfo);
-  };
+    setProjects(projectInfo)
+  }
   const filterWebDevelopment = () => {
-    setProjects(projectInfo.filter((item) => item.type == "Web Development"));
-  };
+    setProjects(projectInfo.filter((item) => item.type == 'Web Development'))
+  }
   const filterWebApp = () => {
-    setProjects(projectInfo.filter((item) => item.type == "Web Application"));
-  };
+    setProjects(projectInfo.filter((item) => item.type == 'Web Application'))
+  }
   const filterSystem = () => {
-    setProjects(projectInfo.filter((item) => item.type == "System"));
-  };
+    setProjects(projectInfo.filter((item) => item.type == 'System'))
+  }
   const filterFuncArr = [
     nonFilter,
     filterWebDevelopment,
     filterWebApp,
-    filterSystem
-  ];
+    filterSystem,
+  ]
 
   return (
     <div className="portfolio-container">
       <header className="child-hierarchy App-header-portfolio">
         <TypingEffectRewindSlow texts={texts} speed={150} />
         <span className="portfolio-section-intro">
-          …All the projects were created from scratch, 
-          half of projects were developed individually and another half through teamwork. 
-          The projects can be categorized as websites, web applications, and systems. Three of them are currently in business use.
+          …All the projects were created from scratch, half of projects were
+          developed individually and another half through teamwork. The projects
+          can be categorized as websites, web applications, and systems. Three
+          of them are currently in business use.
         </span>
       </header>
       <div className="background-image-container"></div>
@@ -163,67 +161,70 @@ const Portoflio = () => {
                 <button
                   key={index}
                   className={`button-style${
-                    activeIndex === index ? "-active" : ""
+                    activeIndex === index ? '-active' : ''
                   }`}
                   onClick={() => {
-                    filterFuncArr[index]();
-                    setActiveIndex(index);
+                    filterFuncArr[index]()
+                    setActiveIndex(index)
                   }}
                 >
                   {title}
                 </button>
-              );
+              )
             })}
           </div>
           <div className="project">
-            {projects.map((project) => {
-              console.log(project.link.length);
+            {projects.map((project, index) => {
+              console.log(project.link.length)
               return (
-                <div className="portfolio-flex-box-column">
+                <div className="portfolio-flex-box-column" key={index}>
                   {project.photos.map((photo, index) => {
-                    const pho = photo.substring(2);
+                    // const pho = photo.substring(2);
                     return (
                       <>
                         {project.link.length == 1 ? (
-                          <a href={project.link[0]} target="_blank">
-                            <img
-                              key={index}
-                              src={photo}
-                            ></img>
+                          <a
+                            href={project.link[0]}
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            <img key={index} src={photo}></img>
                           </a>
                         ) : (
                           <>
                             {index != 2 ? (
-                              <a href={project.link[0]} target="_blank">
-                                <img
-                                  key={index}
-                                  src={photo}
-                                ></img>
+                              <a
+                                href={project.link[0]}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                <img key={index} src={photo}></img>
                               </a>
                             ) : (
-                              <a href={project.link[1]} target="_blank">
-                                <img
-                                  key={index}
-                                  src={photo}
-                                ></img>
+                              <a
+                                href={project.link[1]}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                <img key={index} src={photo}></img>
                               </a>
                             )}
                           </>
                         )}
                       </>
-                    );
+                    )
                   })}
                   <span className="img-title">&#123;{project.name}&#125;</span>
                   <p className="img-text">{project.text}</p>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
         <COntactMe></COntactMe>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Portoflio;
+export default Portoflio

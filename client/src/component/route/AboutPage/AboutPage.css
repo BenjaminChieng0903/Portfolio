@@ -44,12 +44,12 @@
 .paragraph-container span:first-child {
   font-size: 32px;
   color: #f2dd1f;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .paragraph-container span:nth-child(2) {
   font-size: 16px;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 .view-window {
   align-self: center;
@@ -131,10 +131,10 @@
 }
 .traits-container span:nth-child(3) {
   color: #f2dd1f;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 480px) {
   .paragraph-container {
     width: 100%;
     display: flex;
@@ -149,14 +149,14 @@
     font-size: 20px;
     color: #f2dd1f;
     padding: 24px;
-    font-family: "Courier New", Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
   }
-  
+
   .paragraph-container span:nth-child(2) {
     font-size: 12px;
     padding-left: 24px;
     padding-right: 24px;
-    font-family: "Courier New", Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
   }
   .drives {
     display: grid;

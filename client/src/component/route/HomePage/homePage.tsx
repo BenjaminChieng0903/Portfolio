@@ -1,13 +1,14 @@
-import { useOutletContext } from "react-router-dom";
-import TypingEffectRewind from "../../TypingEffect/TypingEffectRewind";
-import TypingEffect from "../../TypingEffect/TypingEffect";
-import "./homePage.css";
-import COntactMe from "../../ContactMe/ContactMe";
+import React from 'react'
+import { useOutletContext } from 'react-router-dom'
+import TypingEffectRewind from '../../TypingEffect/TypingEffectRewind'
+import TypingEffect from '../../TypingEffect/TypingEffect'
+import './homePage.css'
+import COntactMe from '../../ContactMe/ContactMe'
 
 const HomePage = () => {
-  const texts = ["Web Developer", "Software Engineer", "Full-stack Developer"];
-  const navRef = useOutletContext<React.RefObject<HTMLDivElement>>();
-  const backgroundImage = "./images/Selfie/selfie.jpg";
+  const texts = ['Web Developer', 'Software Engineer', 'Full-stack Developer']
+  const navRef = useOutletContext<React.RefObject<HTMLDivElement>>()
+  const backgroundImage = './images/Selfie/selfie.jpg'
   //   const [scienceIslandImages, setScienceIslandImages] = useState([]);
 
   // const importAllImages = (r) => {
@@ -16,10 +17,9 @@ const HomePage = () => {
   const scienceIslandImages = [
     './images/ScienceIsland/SI-game-login.jpg',
     './images/ScienceIsland/SI-game-user.jpg',
-    './images/ScienceIsland/SI-teacher-portal.jpg'
+    './images/ScienceIsland/SI-teacher-portal.jpg',
+  ]
 
-  ];
-  
   // importAllImages(
   //   require.context(
   //     `../images/ScienceIsland`,
@@ -31,10 +31,9 @@ const HomePage = () => {
     './images/Natours/NA-home-page.jpg',
     './images/Natours/NA-real-time-map.jpg',
     './images/Natours/NA-tour-detail.jpg',
-    './images/Natours/NA-user-profile.jpg'
+    './images/Natours/NA-user-profile.jpg',
+  ]
 
-  ];
-  
   // importAllImages(
   //   require.context(
   //     `../images/Natours`,
@@ -47,9 +46,9 @@ const HomePage = () => {
     './images/MusicEvent/ME-2.jpg',
     './images/MusicEvent/ME-3.jpg',
     './images/MusicEvent/ME-4.jpg',
-    './images/MusicEvent/ME-5.jpg'
-  ];
-  
+    './images/MusicEvent/ME-5.jpg',
+  ]
+
   // importAllImages(
   //   require.context(
   //     `../images/MusicEvent`,
@@ -60,9 +59,9 @@ const HomePage = () => {
   const kingClothing = [
     './images/KingClothing/KC-1.jpg',
     './images/KingClothing/KC-2.jpg',
-    './images/KingClothing/KC-3.jpg'
-  ];
-  
+    './images/KingClothing/KC-3.jpg',
+  ]
+
   // importAllImages(
   //   require.context(
   //     `../images/KingClothing`,
@@ -74,9 +73,9 @@ const HomePage = () => {
   const aubot = [
     './images/Aubot/aubot-banner.jpg',
     './images/Aubot/aubot-course-description.jpg',
-    './images/Aubot/aubot-test-templates.jpg'
-  ];
-  
+    './images/Aubot/aubot-test-templates.jpg',
+  ]
+
   // importAllImages(
   //   require.context(
   //     `../images/Aubot`,
@@ -86,13 +85,13 @@ const HomePage = () => {
   // );
   const scrollToSection = () => {
     navRef.current?.scrollIntoView({
-      behavior: "smooth"
-    });
-  };
+      behavior: 'smooth',
+    })
+  }
   return (
     <div className="App">
       <header className="child-hierarchy App-header">
-        <span className="self-intro">Hi, I'm BENJAMIN QIAN, A....</span>
+        <span className="self-intro">Hi, I&apos;m BENJAMIN QIAN, A....</span>
         <TypingEffectRewind texts={texts} speed={150} />
         <button className="arrow-button">
           <div className="line"></div>
@@ -102,7 +101,10 @@ const HomePage = () => {
       </header>
       <div className="view-window child-hierarchy"></div>
       <div className="background-image-container">
-        <div className="scrollable-content-top" style={{ backgroundImage: `url(${backgroundImage})` }}>
+        <div
+          className="scrollable-content-top"
+          style={{ backgroundImage: `url(${backgroundImage})` }}
+        >
           {/* <img className="background-image" src="./images/selfie.jpg"/> */}
         </div>
       </div>
@@ -116,8 +118,8 @@ const HomePage = () => {
           <div className="about-me-details">
             <div className="details-grid">
               <div className="details-grid-intro">
-                Software engineer graduated from master’s degree in
-                software engineering at the University of Melbourne,
+                Software engineer graduated from master’s degree in software
+                engineering at the University of Melbourne,
                 <span className="highlighter"> 3</span> years of real-world
                 software development experience with more than
                 <span className="highlighter"> 10</span> formal projects.
@@ -130,7 +132,8 @@ const HomePage = () => {
                   <br />
                   Back-end Development: Node.js | Express.js | Java/Springboot |
                   Python/Flask <br />
-                  Database: MongoDB | MySql | PostgresSql<br />
+                  Database: MongoDB | MySql | PostgresSql
+                  <br />
                   DevOps: Docker | GCP
                 </p>
               </div>
@@ -148,51 +151,54 @@ const HomePage = () => {
           <span>(!)</span>
           <span className="any-section-title">&lt;Portfolio&gt;</span>
           <p className="any-section-intro portfolio-intro">
-            //.. All the projects were created from scratch, half of projects were developed individually and another half through teamwork. 
-            The projects can be categorized as websites, web applications, 
-            and systems. Three of them are currently in business use.
-            
+            (//.. All the projects were created from scratch, half of projects
+            were developed individually and another half through teamwork. The
+            projects can be categorized as websites, web applications, and
+            systems. Three of them are currently in business use.)
           </p>
           <div className="portfolio">
             <div className="portfolio-grid-1">
               <div className="portfolio-flex-box-row">
                 <div className="portfolio-flex-box-column">
                   {/* <div className="portfolio-image-container"></div> */}
-                  {natoursImages.map((item) => {
-                    item = item.substring(2);
+                  {natoursImages.map((item, index) => {
+                    item = item.substring(2)
                     return (
                       <a
+                        key={index}
                         href="https://github.com/BenjaminChieng0903/Natours"
                         target="_blank"
+                        rel="noreferrer"
                       >
-                        <img
-                          src={item}
-                        ></img>
+                        <img src={item}></img>
                       </a>
-                    );
+                    )
                   })}
                   <span className="img-title">&#123;Natours&#125;</span>
                   <p className="img-text">
-                    //.. Natours is a tourism website that introduces exciting
-                    tours in America to customers.
+                    (//.. Natours is a tourism website that introduces exciting
+                    tours in America to customers.)
                   </p>
                 </div>
                 <div className="portfolio-flex-box-column">
-                  {scienceIslandImages.map((item) => {
-                    item = item.substring(2);
+                  {scienceIslandImages.map((item, index) => {
+                    item = item.substring(2)
                     return (
-                      <a href="https://www.scienceisland.com/" target="_blank">
-                        <img
-                          src={item}
-                        ></img>
+                      <a
+                        key={index}
+                        href="https://www.scienceisland.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        <img src={item}></img>
                       </a>
-                    );
+                    )
                   })}
                   <span className="img-title">&#123;Science Island&#125;</span>
                   <p className="img-text">
-                    //.. Science Island is an engaging game-based online
+                    (//.. Science Island is an engaging game-based online
                     educational platform tailored for children aged eight to
-                    thirteen, focused on imparting STEM knowledge.
+                    thirteen, focused on imparting STEM knowledge.)
                   </p>
                 </div>
               </div>
@@ -200,49 +206,49 @@ const HomePage = () => {
             <div className="portfolio-grid-2 portfolio-grid-row">
               <div className="portfolio-flex-box-column content-in-second-cell">
                 {/* <div className="portfolio-image-container"></div> */}
-                {musicEvent.map((item) => {
-                  item = item.substring(2);
+                {musicEvent.map((item, index) => {
+                  item = item.substring(2)
                   return (
                     <a
+                      key={index}
                       href="https://github.com/SWEN900072023/Green-Day"
                       target="_blank"
+                      rel="noreferrer"
                     >
-                      <img
-                        src={item}
-                      ></img>
+                      <img src={item}></img>
                     </a>
-                  );
+                  )
                 })}
                 <span className="img-title">&#123;Music Event&#125;</span>
                 <p className="img-text">
-                  //.. The Music Event System is an online website for people to
-                  order tickets for various music events. The system with
+                  (//.. The Music Event System is an online website for people
+                  to order tickets for various music events. The system with
                   beautiful UI incorporates multiple backend architecture
-                  designs without utilizing any frameworks
+                  designs without utilizing any frameworks)
                 </p>
               </div>
             </div>
             <div className="portfolio-grid-3 portfolio-grid-row">
               <div className="portfolio-flex-box-column content-in-second-cell">
                 {/* <div className="portfolio-image-container"></div> */}
-                {kingClothing.map((item) => {
-                  item = item.substring(2);
+                {kingClothing.map((item, index) => {
+                  item = item.substring(2)
                   return (
                     <a
+                      key={index}
                       href="https://benevolent-basbousa-bf8c47.netlify.app/"
                       target="_blank"
+                      rel="noreferrer"
                     >
-                      <img
-                        src={item}
-                      ></img>
+                      <img src={item}></img>
                     </a>
-                  );
+                  )
                 })}
                 <span className="img-title">&#123;King Clothing&#125;</span>
                 <p className="img-text">
-                  //.. King-Clothing is an online e-commerce platform
+                  (//.. King-Clothing is an online e-commerce platform
                   specializing in fashion-forward apparel. Utilizing
-                  cutting-edge front-end techniques and stunning web design,
+                  cutting-edge front-end techniques and stunning web design,)
                 </p>
               </div>
             </div>
@@ -250,37 +256,37 @@ const HomePage = () => {
               <div className="portfolio-flex-box-column content-in-second-cell">
                 {/* <div className="portfolio-image-container"></div> */}
                 {aubot.map((item, index) => {
-                  item = item.substring(2);
+                  item = item.substring(2)
                   return (
                     <>
                       {index != 2 ? (
                         <a
+                          key={index}
                           href="https://aubot-academy.webflow.io/"
                           target="_blank"
+                          rel="noreferrer"
                         >
-                          <img
-                            src={item}
-                          ></img>
+                          <img src={item}></img>
                         </a>
                       ) : (
                         <a
                           href="https://github.com/BenjaminChieng0903/Python-AST"
                           target="_blank"
+                          rel="noreferrer"
                         >
-                          <img
-                            src={item}
-                          ></img>
+                          <img src={item}></img>
                         </a>
                       )}
                     </>
-                  );
+                  )
                 })}
                 <span className="img-title">&#123;Aubot Academy&#125;</span>
                 <p className="img-text">
-                  //.. 'Aubot academy' which is an online educational platform
-                  to teach programming languages to Australian students from
-                  year 1 to year 12. Students can learn contemporary mainstream
-                  programming languages and skills such as Java, Python etc.
+                  (//.. &apos;Aubot academy&apos; which is an online educational
+                  platform to teach programming languages to Australian students
+                  from year 1 to year 12. Students can learn contemporary
+                  mainstream programming languages and skills such as Java,
+                  Python etc.)
                 </p>
               </div>
             </div>
@@ -292,8 +298,8 @@ const HomePage = () => {
             &lt;Services&gt;
           </h1>
           <p className="any-section-intro">
-            //.. Front-end Development | Back-end Development | Web Development
-            | Software Development | Data Integration
+            (//.. Front-end Development | Back-end Development | Web Development
+            | Software Development | Data Integration)
           </p>
           <div className="services-container">
             {texts.map((title, index) => {
@@ -304,7 +310,7 @@ const HomePage = () => {
                   index={index}
                   key={index}
                 />
-              );
+              )
             })}
           </div>
           <button className="homepage-button" onClick={() => scrollToSection()}>
@@ -318,7 +324,7 @@ const HomePage = () => {
         <COntactMe></COntactMe>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default HomePage;
+export default HomePage

@@ -22,12 +22,12 @@
 }
 .container-el::before {
   display: block;
-  content: "//Benjamin";
+  content: '//Benjamin';
   color: white;
 }
 .container-el::after {
   display: block;
-  content: "web_dev";
+  content: 'web_dev';
   color: #8d69e0;
 }
 .nav-details {
@@ -93,7 +93,7 @@ footer {
   grid-row: 1/2;
   font-size: 16px;
   justify-content: center;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   color: #f2dd1f;
   align-self: flex-end;
   text-align: center;
@@ -101,13 +101,13 @@ footer {
 
 @media only screen and (max-width: 480px) {
   .fixed-image-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 30px; /* Adjust the width as needed */
-  height: 100vh; /* Full height */
-  z-index: -10; /* Ensure it stays above other content */
-}
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30px; /* Adjust the width as needed */
+    height: 100vh; /* Full height */
+    z-index: -10; /* Ensure it stays above other content */
+  }
   .nav-container {
     display: flex;
     flex-direction: row;
@@ -150,6 +150,4 @@ footer {
     width: 100%;
     padding: 20px;
   }
-
-
 }

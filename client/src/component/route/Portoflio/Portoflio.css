@@ -39,7 +39,7 @@
 }
 .portfolio-section-intro {
   width: 60%;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   color: #f2dd1f;
   font-size: 20px;
 }
@@ -91,7 +91,7 @@
 @media only screen and (max-width: 480px) {
   .portfolio-section-intro {
     width: 100%;
-    font-family: "Courier New", Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     color: #f2dd1f;
     padding-left: 36px;
     padding-right: 16px;
@@ -107,7 +107,7 @@
   .project {
     display: grid;
     grid-template-columns: repeat(2, minmax(200px, 1fr));
-  
+
     width: 100%;
     gap: 16px;
     padding-left: 16px;
