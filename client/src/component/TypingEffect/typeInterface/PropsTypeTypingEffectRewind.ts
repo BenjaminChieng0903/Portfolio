@@ -1,4 +1,4 @@
 export interface PropsTypeTypingEffectRewind {
-    texts: string[],
-    speed: number
+  texts: string[]
+  speed: number
 }

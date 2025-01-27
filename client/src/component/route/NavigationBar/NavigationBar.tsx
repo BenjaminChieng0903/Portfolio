@@ -1,25 +1,25 @@
-import { Outlet, useNavigate } from "react-router-dom";
-import "./NavigationBar.css";
-import { useRef, useState } from "react";
+import React from 'react'
+import { Outlet, useNavigate } from 'react-router-dom'
+import './NavigationBar.css'
+import { useRef, useState } from 'react'
 
 const NavigationBar = () => {
-  const navigate = useNavigate();
-  const navRef = useRef<HTMLDivElement>(null);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const navigate = useNavigate()
+  const navRef = useRef<HTMLDivElement>(null)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const navDetailsArray = [
-    "_home",
-    "_about",
-    "_portoflio",
-    "_services",
-    "_resume",
-    "_contact",
-  ];
-  const [activeIndex, setActiveIndex] = useState(0);
+    '_home',
+    '_about',
+    '_portoflio',
+    '_services',
+    '_resume',
+    '_contact',
+  ]
+  const [activeIndex, setActiveIndex] = useState(0)
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
+    setIsMenuOpen(!isMenuOpen)
+  }
   return (
     <>
       <div className="fixed-image-container">
@@ -31,28 +31,28 @@ const NavigationBar = () => {
       <div className="nav-container" ref={navRef}>
         <span className="container-el"></span>
         <div className="menu-toggle" onClick={toggleMenu}>
-        <img src="./images/icons8-menu-50.png"/>
-      </div>
-        <div className={`nav-details${isMenuOpen ? "-open" : ""}`}>
+          <img src="./images/icons8-menu-50.png" />
+        </div>
+        <div className={`nav-details${isMenuOpen ? '-open' : ''}`}>
           {navDetailsArray.map((item, index) => {
             return (
               <span
                 key={index}
                 className={`text-element${
-                  activeIndex === index ? "-active" : ""
+                  activeIndex === index ? '-active' : ''
                 }`}
                 onClick={() => {
                   if (index == 0) {
-                    navigate("/");
+                    navigate('/')
                   } else {
-                    navigate(`/${navDetailsArray[index].substring(1)}`);
+                    navigate(`/${navDetailsArray[index].substring(1)}`)
                   }
-                  setActiveIndex(index);
+                  setActiveIndex(index)
                 }}
               >
                 {item}
               </span>
-            );
+            )
           })}
         </div>
       </div>
@@ -66,6 +66,7 @@ const NavigationBar = () => {
           <a
             href="mailto:qianjingning0903@gmail.com?subject=Subject&body=Body%20text"
             target="_blank"
+            rel="noreferrer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -98,6 +99,7 @@ const NavigationBar = () => {
           <a
             href="https://www.linkedin.com/in/benjamin-qian-500a24245"
             target="_blank"
+            rel="noreferrer"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +125,11 @@ const NavigationBar = () => {
               />
             </svg>
           </a>
-          <a href="https://github.com/BenjaminChieng0903/" target="_blank">
+          <a
+            href="https://github.com/BenjaminChieng0903/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 48 48"
@@ -158,7 +164,7 @@ const NavigationBar = () => {
         </span>
       </footer>
     </>
-  );
-};
+  )
+}
 
-export default NavigationBar;
+export default NavigationBar

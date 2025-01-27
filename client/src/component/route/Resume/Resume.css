@@ -33,7 +33,7 @@
 }
 .resume-section-intro {
   width: 50%;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   color: #f2dd1f;
   font-size: 16px;
   margin-bottom: 48px;
@@ -118,7 +118,7 @@
 }
 .traits-container span:nth-child(3) {
   color: #f2dd1f;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 .experience-info-container {
   display: grid;
@@ -131,7 +131,7 @@
 }
 .resume-grid-info-style {
   font-size: 16px;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   color: #f2dd1f;
   padding: 32px;
   text-align: start;
@@ -139,7 +139,7 @@
 .resume-grid-animation {
   display: flex;
   flex-direction: row;
-  gap:24px;
+  gap: 24px;
   justify-content: center;
   align-items: center;
   /* flex: 0 0 200px; */
@@ -147,16 +147,16 @@
 
 .resume-grid-animation span:first-child {
   color: white;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 
-.position-company-flexbox{
+.position-company-flexbox {
   display: flex;
   flex-direction: column;
   padding: 36px;
-  gap:36px;
+  gap: 36px;
 }
-.company-period-flexbox{
+.company-period-flexbox {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -170,13 +170,13 @@
     grid-template-columns: none;
     grid-template-rows: repeat(8, 1fr);
   }
-  .position-company-flexbox{
+  .position-company-flexbox {
     display: flex;
     flex-direction: column;
     padding: 36px;
-    gap:64px;
+    gap: 64px;
   }
-  .company-period-flexbox{
+  .company-period-flexbox {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -187,14 +187,14 @@
   }
   .resume-grid-info-style {
     font-size: 16px;
-    font-family: "Courier New", Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     color: #f2dd1f;
     padding: 32px;
-    text-align:left;
+    text-align: left;
   }
   .resume-section-intro {
     width: 100%;
-    font-family: "Courier New", Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     color: #f2dd1f;
     font-size: 16px;
     margin-bottom: 48px;
@@ -203,8 +203,8 @@
   .skills {
     display: grid;
     width: 100%;
-    grid-template-columns:none;
-    grid-template-rows:1fr 1fr 0.9fr 0.8fr;
+    grid-template-columns: none;
+    grid-template-rows: 1fr 1fr 0.9fr 0.8fr;
   }
   .traits-container {
     display: flex;

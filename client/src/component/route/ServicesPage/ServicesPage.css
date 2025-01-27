@@ -28,7 +28,7 @@
 
 .services-section-intro {
   width: 60%;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   color: #f2dd1f;
   font-size: 20px;
 }
@@ -55,7 +55,7 @@
 }
 .grid-info-style {
   font-size: 16px;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   color: #f2dd1f;
   padding: 32px;
   text-align: start;
@@ -72,7 +72,7 @@
 
 .grid-animation span:first-child {
   color: white;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 @media only screen and (max-width: 480px) {
   .services-info-container {
@@ -82,14 +82,14 @@
   }
   .grid-info-style {
     font-size: 12px;
-    font-family: "Courier New", Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     color: #f2dd1f;
     padding: 8px;
     text-align: start;
   }
   .services-section-intro {
     width: 100%;
-    font-family: "Courier New", Courier, monospace;
+    font-family: 'Courier New', Courier, monospace;
     color: #f2dd1f;
     font-size: 20px;
     padding-left: 16px;

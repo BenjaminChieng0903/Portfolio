@@ -25,7 +25,7 @@
   font-size: 64px;
   font-weight: 100;
 }
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 480px) {
   .typing-effect-slow {
     font-size: 24px;
     color: #4791e1;

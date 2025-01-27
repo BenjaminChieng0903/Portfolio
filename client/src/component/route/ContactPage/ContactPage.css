@@ -53,7 +53,7 @@
 .email-details span:first-child,
 .address-details span:first-child {
   font-size: 24px;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   color: #8d69e0;
 }
 
@@ -62,7 +62,7 @@
 .address-details span:nth-child(2) {
   font-size: 24px;
   color: #f2dd1f;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 .App-header-contact {
   background-color: #282c34;
@@ -77,26 +77,25 @@
   gap: 30px;
 }
 @media only screen and (max-width: 480px) {
-
-.address-grid {
-  display: grid;
-  width: 90%;
-  grid-template-rows: 1fr 1fr 1fr;
-  grid-template-columns: none;
-}
-.phone-details,
-.email-details,
-.address-details {
-  display: flex;
-  flex-direction: column;
-  padding: 24px;
-  gap: 32px;
-  border-top: 0.5px inset #aba8a7;
-  text-align: start;
-}
-.map {
-  width: 100%;
-  height: 50vh;
-  padding-left: 36px;
-}
+  .address-grid {
+    display: grid;
+    width: 90%;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: none;
+  }
+  .phone-details,
+  .email-details,
+  .address-details {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 32px;
+    border-top: 0.5px inset #aba8a7;
+    text-align: start;
+  }
+  .map {
+    width: 100%;
+    height: 50vh;
+    padding-left: 36px;
+  }
 }

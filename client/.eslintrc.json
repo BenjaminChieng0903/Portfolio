@@ -3,19 +3,32 @@
     "browser": true,
     "es6": true
   },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
+    "requireConfigFile": false,
     "ecmaFeatures": {
       "jsx": true
     },
-    "ecmaVersion": 8,
+    "babelOptions": {
+      "presets": ["@babel/preset-env", "@babel/preset-react"]
+    },
+    "ecmaVersion": 2021,
     "sourceType": "module"
   },
-  "parser": "@babel/eslint-parser",
   "rules": {
-    "semi": ["error", "always"]
+    "prettier/prettier": "error",
+    "semi": ["error", "never"],
+    "no-console": "warn",
+    "no-unused-vars": "off"
   }
 }

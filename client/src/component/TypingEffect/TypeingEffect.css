@@ -74,7 +74,7 @@
   font-weight: 100;
   color: white;
 }
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 480px) {
   .typing-effect-0 {
     font-size: 12px;
     color: #8d69e0;
@@ -105,10 +105,10 @@
     color: white;
   }
   .service-bar-0,
-.service-bar-1,
-.service-bar-2 {
-  width: 100%;
-  padding: 12px;
-  border: 0.5px solid #aba8a7;
-}
+  .service-bar-1,
+  .service-bar-2 {
+    width: 100%;
+    padding: 12px;
+    border: 0.5px solid #aba8a7;
+  }
 }
